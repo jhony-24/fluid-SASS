@@ -1,15 +1,19 @@
 const { src, dest, task, watch, series } = require("gulp");
 const sass = require("gulp-sass");
+const bulkSass = require("gulp-sass-bulk-import");
 const autoprefixer = require('gulp-autoprefixer');
+
+
 
 function sassTask() {
     return (
-        src("./sass/main.scss")
+        src("./sass/**/*.scss")
+            .pipe(bulkSass())
             .pipe(sass({
                 outputStyle: "compressed"
             }))
             .pipe(autoprefixer())
-            .pipe(dest("./css"))
+            .pipe(dest("./css/main.min.css"))
     );
 }
 
