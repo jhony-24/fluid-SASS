@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es" class="lang">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fluid-sass</title>
+    <link rel="shortcut icon" href="./assets/images/fluid.png">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <meta name="keywords" content="fluid-sass,fluid,sass animations,fluid animations" />
+    <meta name="description" content="mixins animations to include in sass files in development" />
+    <meta name="title" content="fluid-sass" />
+    <meta name="author" content="jhony.vega" />
+    <meta name="subject" content="library to sass" />
+    <link rel="stylesheet" href="./assets/css/components.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+    <script src="./assets/js/components.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</head>
+
+<body>
+    <div class="loading" id="loading-page"></div>
+    <div id="app">
+        <div class="header">
+            <div class="links">
+                <strong-link to="#home" text="inicio"></strong-link>
+                <strong-link to="#mixins" text="mixins"></strong-link>
+                <strong-link to="#examples" text="ejemplos"></strong-link>
+            </div>
+            <div class="circle"><div class="text-circle">{{circleTextAnimationSelect}}</div></div>
+        </div>
+        <div class="landing section">
+            <div class="landing-detail">
+                <div class="title-ldg center">
+                    <span class="tp">Fluid</span> <span class="ts">SASS</span>
+                </div>
+                <div class="center landing-message">
+                    <square name-animation="animate-square-landing"></square>
+                    <text-smooth text="Mixins animations to perzonalise to developments sass. Let’s go , get started."></text-smooth>
+                </div>
+            </div>
+        </div>
+
+        <div class="details section">
+            <detail-section>
+                <paragraph-detail 
+                    slot="header" 
+                    id="mixins"
+                    title="MIXINS :"
+                    detail="Mixins animations to perzonalise to developments sass. Let’s go , get started.">
+                </paragraph-detail>
+                <div slot="body">
+                    <div class="all-mixins">
+                        <type-animation v-for="i in allAnimations" :text="i" @onclick="selectAnimation"></type-animation>
+                    </div>
+                    <div class="preview-change-animation">
+                        <square :name-animation="currentAnimation"></square>
+                    </div>
+                </div>
+            </detail-section>
+        </div>
+       
+        <div class="footer">
+            <address>@fluid-sass.library</address>
+        </div>
+    </div>
+
+</body>
+
+</html>
