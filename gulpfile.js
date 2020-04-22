@@ -13,7 +13,7 @@ function sassTask() {
                 outputStyle: "compressed"
             }))
             .pipe(autoprefixer())
-            .pipe(dest("./css/main.min.css"))
+            .pipe(dest("./css"))
     );
 }
 
