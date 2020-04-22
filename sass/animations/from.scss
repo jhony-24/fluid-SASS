@@ -1,0 +1,17 @@
+$from : from;
+
+.#{$from}-left {
+    @include animation(( name : fade-left , duration : .3s )){
+        from {
+            @include transform(defineTransforms(( translateX : -100% ))); 
+        }
+    }
+}
+
+.#{$from}-right {
+    @include animation(( name : fade-right , duration : .3s )){
+        from {
+            @include transform(defineTransforms(( translateX : 100% ))); 
+        }
+    }
+}

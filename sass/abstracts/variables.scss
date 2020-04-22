@@ -1,0 +1,14 @@
+// generators of structure to animations
+
+@mixin animation($props) {
+    $name : map-get($map: $props, $key: name);
+    $duration : map-get($map: $props, $key: duration);
+    animation: $name $duration 1 ease-in-out;
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin transform($mapTransform) {
+    transform: $mapTransform;
+}

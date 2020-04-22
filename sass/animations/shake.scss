@@ -1,0 +1,13 @@
+
+$shake : shake;
+
+.#{$shake} {
+    @include animation(( name : shake , duration : .3s )){
+        0% , 50% {
+            @include transform(defineTransforms(( translateX : 10px ))); 
+        }
+        30% , 100% {
+            @include transform(defineTransforms(( translateX : -10px ))); 
+        }
+    }
+}

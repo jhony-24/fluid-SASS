@@ -1,0 +1,15 @@
+@function getProp($map,$prop) {
+    @if(map-has-key($map, $prop)) {
+        @return map-get($map, $prop);
+    }
+    @return "";
+}
+
+@function defineTransforms($transforms) {
+    $all : "";
+    @each $key, $value in $transforms {
+        $propTransform : "#{$key}(#{$value})";
+        $all : $all + $propTransform;
+    } 
+    @return unquote($all);
+}
