@@ -1,0 +1,41 @@
+$bounce : bounce;
+
+@mixin bounce($transforms) {
+    @include transform(defineTransforms($transforms)); 
+}
+
+.#{$bounce} {
+    @include animation(( name : bounce , duration : .3s )){
+        50%{
+            @include bounce((scale:1.5));
+        }
+        90% {
+            @include bounce((scale:.7));
+        }
+        95% {
+            @include bounce((scale:1.1));
+        }
+    }
+}
+
+.#{$bounce}-inset {
+    @include animation((name : bounce-inset , duration : .3s)) {
+        50% {
+            @include bounce((scale:.5));
+        }
+    }
+}
+
+.#{$bounce}-rotate {
+    @include animation((name : bounce-rotate , duration : .8s)) {
+        from {
+            @include bounce((scale:1));
+        }        
+        50% {
+            @include bounce((scale:1.5, rotate: 1turn));
+        }
+        100% {
+            @include bounce((scale:.8, rotate : 0deg));
+        }
+    }
+}

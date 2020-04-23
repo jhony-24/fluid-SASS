@@ -1,7 +1,9 @@
 const typesAnimation = [
-    "spring", "shake", "from-left", "splash", "jump", "fade-in", "fade-out", "from-right",
-    "force", "rotate", "kite", "fade-to-left", "fade-to-right", "explosion",
-    "bounce", "break","invert"
+    "spring", "shake", "from-left", "splash",
+    "jump", "fade-in", "fade-out", "from-right",
+    "force", "rotate", "kite", "fade-to-left",
+    "fade-to-right", "explosion",
+    "bounce", "break", "invert"
 ];
 
 const links = [
