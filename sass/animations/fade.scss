@@ -1,8 +1,50 @@
 $fade : fade;
+
+@mixin fade($transforms) {
+    @include transform(defineTransforms($transforms)); 
+}
+
 .#{$fade} {
     @include animation(( name : fade , duration : .3s )){
         from {
             opacity:  0;
+        }
+    }
+}
+
+
+.#{$fade}-intermittent {
+    $maxFrames : 20;
+    @include animation(( name : fade-intermittent , duration : 2s )){
+        @for $i from 1 through $maxFrames {
+            @if $i % 2 == 0 {
+                #{$i}%{
+                    opacity: random(10) / 100;
+                }
+            }
+        }
+    }
+}
+
+.#{$fade}-left {
+    @include animation(( name : fade-left , duration : .3s )) {
+        from {
+            @include fade((translateX : -100%));
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+.#{$fade}-right {
+    @include animation(( name : fade-right , duration : .3s )) {
+        from {
+            @include fade((translateX : 100%));
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
         }
     }
 }
