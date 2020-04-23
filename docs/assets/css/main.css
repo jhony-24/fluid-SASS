@@ -119,12 +119,12 @@
 
 
 .all-mixins {
-    margin: 2em auto;
     display: flex;
     flex-flow: wrap;
+    width: 80%;
 }
 .all-mixins > *{ 
-    margin: 1em;
+    margin: 1em 1em 1em 0;
 }
 
 .square {

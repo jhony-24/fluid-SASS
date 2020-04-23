@@ -49,6 +49,7 @@
 }
 .paragraph > .p-detail {
     color: var(--text-smooth);
+    width: 80%;
 }
 
 /*details container section*/
