@@ -7,15 +7,17 @@ const typesAnimation = [
 
 const links = [
     { to: "#home", text: "home" },
-    { to: "#mixins", text: "mixins and css class" },
+    { to: "#mixins", text: "mixins" },
     { to: "#examples", text: "examples" },
 ];
 
-window.addEventListener('load', function () {
-
+const completeLoading = function () {
     document.getElementById('app').style.visibility = 'visible';
     document.getElementById('loading-page').remove();
+}
 
+window.addEventListener('load', function () {
+    completeLoading();
     new Vue({
         el: '#app',
         data: {

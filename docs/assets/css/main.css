@@ -120,10 +120,13 @@
 
 .all-mixins {
     margin: 2em auto;
-    display: grid;
-    grid-gap: 1em;
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    display: flex;
+    flex-flow: wrap;
 }
+.all-mixins > *{ 
+    margin: 1em;
+}
+
 .square {
     --size : 70px;
     background: var(--primary-color);
