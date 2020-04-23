@@ -1,12 +1,7 @@
 const typesAnimation = [
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
-    "spring", "shake", "fromLeft", "splash",
+    "spring", "shake", "from-left", "splash", "jump", "fade-in", "fade-out", "from-right",
+    "force", "rotate", "kite", "fade-to-left", "fade-to-right", "explosion",
+    "bounce", "break","invert"
 ];
 
 const links = [
@@ -14,7 +9,6 @@ const links = [
     { to: "#mixins", text: "mixins" },
     { to: "#examples", text: "examples" },
 ];
-
 
 window.addEventListener('load', function () {
 
@@ -48,4 +42,5 @@ window.addEventListener('load', function () {
             }
         },
     });
+
 });
