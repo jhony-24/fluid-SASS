@@ -1,6 +1,6 @@
 const typesAnimation = [
     "bounce", "bounce-inset", "bounce-rotate",
-    "fade",
+    "fade", "fade-intermittent", "fade-left", "fade-right",
     "from-left", "from-right", "from-top", "from-bottom",
     "shake", "shake-rotate", "shake-vertical"
 ];

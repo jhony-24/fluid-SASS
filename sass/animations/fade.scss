@@ -30,6 +30,7 @@ $fade : fade;
     @include animation(( name : fade-left , duration : .3s )) {
         from {
             @include fade((translateX : -100%));
+            opacity: 0;
         }
         50% {
             opacity: 0;
