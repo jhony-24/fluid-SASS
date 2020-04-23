@@ -1,17 +1,49 @@
 $from : from;
 
+@mixin from($transforms) {
+    @include transform(defineTransforms($transforms)); 
+}
+
 .#{$from}-left {
-    @include animation(( name : fade-left , duration : .3s )){
-        from {
-            @include transform(defineTransforms(( translateX : -100% ))); 
+    @include animation(( name : from-left , duration : .3s )){
+        10% {
+            @include from((translateX:-100%));
+        }
+        60% {
+            @include from((translateX:20px));
         }
     }
 }
 
 .#{$from}-right {
-    @include animation(( name : fade-right , duration : .3s )){
-        from {
-            @include transform(defineTransforms(( translateX : 100% ))); 
+    @include animation(( name : from-right , duration : .3s )){
+        10% {
+            @include from(( translateX : 100% )); 
+        }
+        60% {
+            @include from(( translateX : -20px )); 
+        }
+    }
+}
+
+.#{$from}-top {
+    @include animation(( name : from-top , duration : .3s )){
+        10% {
+            @include from(( translateY : -100% )); 
+        }
+        60% {
+            @include from(( translateY : 20px )); 
+        }
+    }
+}
+
+.#{$from}-bottom {
+    @include animation(( name : from-bottom , duration : .3s )){
+        10% {
+            @include from(( translateY : 100% )); 
+        }
+        60% {
+            @include from(( translateY : -20px )); 
         }
     }
 }
