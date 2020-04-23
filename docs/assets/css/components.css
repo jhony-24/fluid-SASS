@@ -24,6 +24,12 @@
     text-align: center;
     transition: .3s background , .3s color;
 }
+
+.type-animation-selected {
+    background:var(--primary-color);
+    color: white;
+}
+
 .type-animation:hover{
     background: var(--primary-color);
     color: white;

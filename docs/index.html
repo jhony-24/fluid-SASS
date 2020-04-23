@@ -35,7 +35,7 @@
                 :selected-color="selectedLink === i.to ? '#5C24FC' : 'black'" 
                 @onclick="onLinkSelected(i.to)"></strong-link>
             </div>
-            <div class="circle"><div class="text-circle">{{circleTextAnimationSelect}}</div></div>
+            <div class="circle"><div class="text-circle">!GO</div></div>
         </div>
         <div class="landing section" id="home">
             <div class="landing-detail">
@@ -44,7 +44,9 @@
                 </div>
                 <div class="center landing-message">
                     <square name-animation="animate-square-landing"></square>
-                    <text-smooth text="Mixins animations to perzonalise to developments sass. Let’s go , get started."></text-smooth>
+                    <text-smooth text="classes to create css animations and custom mixins for sass. Let's go."></text-smooth>
+                    <br/>
+                    <a href="#mixins"><i class="fa fa-chevron-down fa-2x"></i></a>
                 </div>
             </div>
         </div>
@@ -54,15 +56,16 @@
                 <paragraph-detail 
                     slot="header" 
                     id="mixins"
-                    title="MIXINS :"
-                    detail="Mixins animations to perzonalise to developments sass. Let’s go , get started.">
+                    title="MIXINS AND CSS CLASS :"
+                    detail="Here are all the class names to create css animations.">
                 </paragraph-detail>
                 <div slot="body">
                     <div class="all-mixins">
-                        <type-animation v-for="i in allAnimations" :text="i" @onclick="selectAnimation"></type-animation>
+                        <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
                     </div>
                     <div class="preview-change-animation">
                         <square :name-animation="currentAnimation"></square>
+                        <h1 class="center text-preview-animation">{{textAnimationSelected}}</h1>
                     </div>
                 </div>
             </detail-section>

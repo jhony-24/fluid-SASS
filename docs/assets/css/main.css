@@ -133,6 +133,12 @@
     border-radius: 10px;
 }
 
+.text-preview-animation {
+    text-shadow: 0 20px 30px rgba(0,0,0,.2);
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
 .animate-square-landing {
     animation: animate-square-preview-landing 10s infinite linear;
     transform-style: preserve-3d;

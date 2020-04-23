@@ -7,7 +7,7 @@ const typesAnimation = [
 
 const links = [
     { to: "#home", text: "home" },
-    { to: "#mixins", text: "mixins" },
+    { to: "#mixins", text: "mixins and css class" },
     { to: "#examples", text: "examples" },
 ];
 
@@ -22,16 +22,24 @@ window.addEventListener('load', function () {
             typesAnimation,
             currentAnimation: '',
             links,
-            selectedLink: window.location.hash
+            selectedLink: window.location.hash,
         },
         components: { Square, TypeAnimation },
         computed: {
             allAnimations: function () {
                 return this.typesAnimation;
             },
-            circleTextAnimationSelect: function () {
+            textAnimationSelected: function () {
                 let current = this.currentAnimation;
-                return (current !== '') ? ('! ' + current) : 'GO!';
+                return (current !== '') ? ('! ' + current) : '';
+            },
+            classSelected: function () {
+                let current = this.currentAnimation;
+                return function (text) {
+                    return {
+                        'type-animation-selected': (current === text)
+                    };
+                }
             }
         },
         methods: {
