@@ -1,13 +1,39 @@
-
 $shake : shake;
+
+@mixin shake($transforms){
+    @include transform(defineTransforms($transforms)); 
+}
 
 .#{$shake} {
     @include animation(( name : shake , duration : .3s )){
         0% , 50% {
-            @include transform(defineTransforms(( translateX : 10px ))); 
+            @include shake(( translateX : 10px )); 
         }
         30% , 100% {
-            @include transform(defineTransforms(( translateX : -10px ))); 
+            @include shake(( translateX : -10px )); 
         }
     }
+}
+
+.#{$shake}-rotate {
+    @include animation((name : shake-spring , duration : .3s)) {
+        0% , 50% {
+            @include shake(( translateX : 10px , rotate : 20deg  )); 
+        }
+        30% , 100% {
+            @include shake(( translateX : -10px , rotate : -20deg )); 
+        }
+    }
+}
+
+.#{$shake}-vertical {
+    @include animation((name : shake-vertical , duration : .3s)) {
+        0% , 50% {
+            @include shake(( translateY : 10px )); 
+        }
+        30% , 100% {
+            @include shake(( translateY : -10px )); 
+        }
+    }
+
 }

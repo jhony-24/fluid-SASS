@@ -1,6 +1,6 @@
 $fade : fade;
 .#{$fade} {
-    @include animation(( name : $fade , duration : .3s )){
+    @include animation(( name : fade , duration : .3s )){
         from {
             opacity:  0;
         }

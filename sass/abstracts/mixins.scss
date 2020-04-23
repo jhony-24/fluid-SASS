@@ -1,11 +1,11 @@
 @mixin animation($props) {
   $name: map-get(
     $map: $props,
-    $key: name,
+    $key: name
   );
   $duration: map-get(
     $map: $props,
-    $key: duration,
+    $key: duration
   );
   animation: $name $duration 1 ease-in-out;
   @keyframes #{$name} {
