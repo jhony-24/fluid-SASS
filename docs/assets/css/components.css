@@ -57,3 +57,26 @@
     margin: 1em auto;
     width: 95%;
 }
+
+/*card*/
+.card {
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow:0 10px 20px var(--silver);
+}
+.card > strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/*circle button*/
+.circle-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    color: white;
+}

@@ -30,6 +30,12 @@ Vue.component('paragraph-detail', {
     </div>`
 });
 
+Vue.component('card', {
+    props: ["title"],
+    template: `<div class="card"><strong>{{title}}</strong><slot></slot></div>`
+});
+
+
 //self app
 const Square = {
     props: {
@@ -47,6 +53,21 @@ const TypeAnimation = {
     methods: {
         onClick: function () {
             this.$emit("onclick", this.text);
+        }
+    }
+}
+
+const CircleButton = {
+    props: ["icon","bg","fg"],
+    template: `<button class="circle-button" @click="onclick" :style="getStyles"><i :class="icon"></i></button>`,
+    computed : {
+        getStyles : function() {
+            return `background:${this.bg};color:${this.fg};`;
+        }
+    },
+    methods: {
+        onclick: function () {
+            this.$emit("onclick");
         }
     }
 }

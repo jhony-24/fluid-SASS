@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
             links,
             selectedLink: window.location.hash,
         },
-        components: { Square, TypeAnimation },
+        components: { Square, TypeAnimation , CircleButton },
         computed: {
             allAnimations: function () {
                 return this.typesAnimation;

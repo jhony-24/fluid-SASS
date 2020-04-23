@@ -10,6 +10,12 @@ a {
     color: inherit;
 }
 
+button {
+    border-width: 0;
+    outline: none;
+    background: no-repeat;
+}
+
 span,p {
     color: rgb(50,50,50);
 }
