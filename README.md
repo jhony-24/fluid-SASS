@@ -1,4 +1,6 @@
-# :ocean: Fluid SASS
+<p align="center">
+    <img src="docs/assets/images/fluid.png" />
+</p>
 
 mixins animations to include in sass files in development
 
