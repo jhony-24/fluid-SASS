@@ -6,8 +6,15 @@ Vue.component('detail-section', {
 });
 
 Vue.component('strong-link', {
-    props: ['to', 'text'],
-    template: `<a :href="to" class="strong-link">{{text}} <i class="fa fa-chevron-down "></i></a>`
+    props: ['to', 'text', 'selectedColor'],
+    template: `<a :href="to" class="strong-link" @click="onClick" :style="{color:selectedColor}">
+        {{text}} <i class="fa fa-chevron-down "></i>
+    </a>`,
+    methods: {
+        onClick: function () {
+            this.$emit("onclick");
+        }
+    }
 })
 
 Vue.component('text-smooth', {

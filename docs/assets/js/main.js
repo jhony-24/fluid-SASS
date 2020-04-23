@@ -9,6 +9,12 @@ const typesAnimation = [
     "spring", "shake", "fromLeft", "splash",
 ];
 
+const links = [
+    { to: "#home", text: "home" },
+    { to: "#mixins", text: "mixins" },
+    { to: "#examples", text: "examples" },
+];
+
 
 window.addEventListener('load', function () {
 
@@ -19,7 +25,9 @@ window.addEventListener('load', function () {
         el: '#app',
         data: {
             typesAnimation,
-            currentAnimation: ''
+            currentAnimation: '',
+            links,
+            selectedLink: window.location.hash
         },
         components: { Square, TypeAnimation },
         computed: {
@@ -34,6 +42,9 @@ window.addEventListener('load', function () {
         methods: {
             selectAnimation: function (text) {
                 this.currentAnimation = text;
+            },
+            onLinkSelected: function (to) {
+                this.selectedLink = to;
             }
         },
     });

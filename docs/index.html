@@ -27,13 +27,16 @@
     <div id="app">
         <div class="header">
             <div class="links">
-                <strong-link to="#home" text="inicio"></strong-link>
-                <strong-link to="#mixins" text="mixins"></strong-link>
-                <strong-link to="#examples" text="ejemplos"></strong-link>
+                <strong-link 
+                v-for="i in links" 
+                :to="i.to" 
+                :text="i.text"
+                :selected-color="selectedLink === i.to ? '#5C24FC' : 'black'" 
+                @onclick="onLinkSelected(i.to)"></strong-link>
             </div>
             <div class="circle"><div class="text-circle">{{circleTextAnimationSelect}}</div></div>
         </div>
-        <div class="landing section">
+        <div class="landing section" id="home">
             <div class="landing-detail">
                 <div class="title-ldg center">
                     <span class="tp">Fluid</span> <span class="ts">SASS</span>
