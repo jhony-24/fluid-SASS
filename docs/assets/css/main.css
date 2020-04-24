@@ -54,6 +54,15 @@
     margin: auto;
 }
 
+.flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-row-center > * {
+    margin: 2em;
+}
+
 .footer {
     height: 60px;
     background: var(--silver);

@@ -76,7 +76,19 @@
                     id="downloads"
                     title="DOWNLOAD FILES:"
                     detail="download css or sass file to your projects.">
-                
+                </paragraph-detail>
+                <div slot="body">
+                    <div class="center flex-row-center">
+                        <div class="center">
+                            <circle-button @onclick="downloadCSS" icon="fa fa-download" ></circle-button>
+                            <h2>css</h2>
+                        </div>
+                        <div class="center">
+                            <circle-button @onclick="downloadSASS" bg="silver" icon="fa fa-download" ></circle-button>
+                            <h3>sass</h3>
+                        </div>
+                    </div>    
+                </div>
             </detail-section>
         </div>
        

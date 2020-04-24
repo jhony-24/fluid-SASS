@@ -51,10 +51,13 @@ window.addEventListener('load', function () {
             },
             onLinkSelected: function (to) {
                 this.selectedLink = to;
+            },
+            downloadCSS : function () {
+
+            },
+            downloadSASS : function () {
+
             }
-        },
-        created() {
-            console.log(this.examples.fadeleft)
         }
     });
 
