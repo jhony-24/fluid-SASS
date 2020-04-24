@@ -53,7 +53,11 @@ window.addEventListener('load', function () {
                 this.selectedLink = to;
             },
             downloadCSS : function () {
-
+                let a = document.createElement('a');
+                    a.href = 'assets/css/animations.css';
+                a.download = 'animations.css';
+                a.target = "_blank";
+                a.click();
             },
             downloadSASS : function () {
 
