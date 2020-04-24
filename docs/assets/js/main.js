@@ -7,14 +7,15 @@ const typesAnimation = [
 
 const links = [
     { to: "#home", text: "home" },
-    { to: "#mixins", text: "mixins" },
-    { to: "#examples", text: "examples" },
+    { to: "#mixins", text: "mixins and class" },
+    { to: "#downloads", text: "downloads" },
 ];
 
 const completeLoading = function () {
     document.getElementById('app').style.visibility = 'visible';
     document.getElementById('loading-page').remove();
 }
+
 
 window.addEventListener('load', function () {
     completeLoading();
@@ -26,7 +27,7 @@ window.addEventListener('load', function () {
             links,
             selectedLink: window.location.hash,
         },
-        components: { Square, TypeAnimation , CircleButton },
+        components: { Square, TypeAnimation, CircleButton },
         computed: {
             allAnimations: function () {
                 return this.typesAnimation;
@@ -52,6 +53,9 @@ window.addEventListener('load', function () {
                 this.selectedLink = to;
             }
         },
+        created() {
+            console.log(this.examples.fadeleft)
+        }
     });
 
 });

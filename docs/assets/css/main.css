@@ -127,25 +127,7 @@
     margin: 1em 1em 1em 0;
 }
 
-.all-examples {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    grid-gap: 2em;
-    margin: 5em auto;
-}
 
-.all-examples > * {
-    margin-bottom: 1em;
-}
-.all-examples .options {
-    display: flex;
-    align-items: center;
-}
-.all-examples .options > *{
-    margin-right: 20px;
-    margin-top: 10px;
-}
 .square {
     --size : 70px;
     background: var(--primary-color);

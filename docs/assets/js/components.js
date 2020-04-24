@@ -36,15 +36,18 @@ Vue.component('card', {
 });
 
 
-//self app
 const Square = {
     props: {
         nameAnimation: {
             type: String,
             default: 'default'
+        },
+        size: {
+            type: String,
+            default: "70px"
         }
     },
-    template: `<div :class="{ square : true , [nameAnimation] : true }"></div>`
+    template: `<div :style="{width:size,height:size}" :class="{ square : true , [nameAnimation] : true }"></div>`
 }
 
 const TypeAnimation = {
@@ -58,10 +61,10 @@ const TypeAnimation = {
 }
 
 const CircleButton = {
-    props: ["icon","bg","fg"],
+    props: ["icon", "bg", "fg"],
     template: `<button class="circle-button" @click="onclick" :style="getStyles"><i :class="icon"></i></button>`,
-    computed : {
-        getStyles : function() {
+    computed: {
+        getStyles: function () {
             return `background:${this.bg};color:${this.fg};`;
         }
     },
@@ -71,3 +74,4 @@ const CircleButton = {
         }
     }
 }
+
