@@ -5,8 +5,7 @@
   @content;
 }
 
-
-@mixin flex($dir: row, $align: center, $justify : none) {
+@mixin flex($dir: row, $align: center, $justify: none) {
   display: flex;
   flex-direction: $dir;
   align-items: $alignItems;
@@ -20,8 +19,18 @@
 }
 
 @mixin min-width($width) {
-    @media screen and (min-width: $width) {
-      @content;
-    }
+  @media screen and (min-width: $width) {
+    @content;
   }
-  
+}
+
+@mixin bfg($background, $color: initial) {
+  background: $background;
+  color: $color;
+}
+
+@mixin size($width : auto ,$height : auto,$radius : 0){
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}

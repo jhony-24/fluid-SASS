@@ -1,0 +1,72 @@
+// text smooth
+.text-smooth {
+    color: $text-smooth;
+}
+
+// strong like
+.strong-link {
+    font-weight: bold;
+    @include flex(row);
+    > i {
+        margin-left: 10px;
+        font-size: 12px;
+    }
+}
+
+// type animation
+.type-animation {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    background: $silver;
+    text-align: center;
+    transition: .3s background , .3s color;
+    &:hover {
+        @include bfg($primary-color,white);
+        cursor: pointer;
+    }
+}
+
+.type-animation-selected {
+    @include bfg($primary-color,white);
+}
+
+// paragraph
+.paragraph {
+    @include flex(column,none,none);
+    > .p-title {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        margin-bottom: 5px;
+    }
+    > .p-detail {
+        color: $text-smooth;
+        width: 80%;
+    }
+}
+
+// details container section
+.detail-section {
+    margin: 1em auto;
+    width: 95%;
+}
+
+// card
+.card {
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow:0 10px 20px $silver;
+    > strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+// circle button
+.circle-button {
+    @include size(50px,50px,100%);
+    @include flex(row,center,center);
+    @include bfg($primary-color,white);
+}

@@ -2,9 +2,15 @@
 "./abstracts/variables",
 "./abstracts/mixins";
 
+@import
+"./base/reset";
+
 @import 
 "./components/all";
 
 @import 
 "./layouts/header",
 "./layouts/footer";
+
+
+// sass --no-source-maps --watch sass/main.scss:css/main.bundle.css --style=compressed 
