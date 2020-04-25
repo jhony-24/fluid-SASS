@@ -1,5 +1,4 @@
 /node_modules/
 /css
-test/
-/docs/assets/sass/
+/example/
 package-lock.json
