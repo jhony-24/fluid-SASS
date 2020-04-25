@@ -2,7 +2,7 @@ const typesAnimation = [
     "bounce", "bounce-inset", "bounce-rotate",
     "fade", "fade-intermittent", "fade-left", "fade-right",
     "from-left", "from-right", "from-top", "from-bottom",
-    "shake", "shake-rotate", "shake-vertical"
+    "shake", "shake-rotate", "shake-vertical", "shake-cross"
 ];
 
 const links = [
@@ -27,7 +27,9 @@ window.addEventListener('load', function () {
             links,
             selectedLink: window.location.hash,
         },
+
         components: { Square, TypeAnimation, CircleButton },
+
         computed: {
             allAnimations: function () {
                 return this.typesAnimation;
@@ -45,6 +47,7 @@ window.addEventListener('load', function () {
                 }
             }
         },
+
         methods: {
             selectAnimation: function (text) {
                 this.currentAnimation = text;
@@ -52,14 +55,14 @@ window.addEventListener('load', function () {
             onLinkSelected: function (to) {
                 this.selectedLink = to;
             },
-            downloadCSS : function () {
+            downloadCSS: function () {
                 let a = document.createElement('a');
-                    a.href = 'assets/css/animations.css';
+                a.href = 'assets/css/animations.css';
                 a.download = 'animations.css';
                 a.target = "_blank";
                 a.click();
             },
-            downloadSASS : function () {
+            downloadSASS: function () {
 
             }
         }

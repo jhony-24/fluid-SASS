@@ -37,3 +37,21 @@ $shake : shake;
     }
 
 }
+
+.#{$shake}-cross {
+    @include animation((name : shake-cross , duration : .4s)) {
+        0% , 50% {
+            @include shake(( translateX : 10px )); 
+        }
+        10% , 60% {
+            @include shake(( translateY : 10px )); 
+        }
+        20% , 70% {
+            @include shake(( translateY : -10px )); 
+        }
+        30% , 100% {
+            @include shake(( translateX : -10px )); 
+        }
+
+    }
+}
