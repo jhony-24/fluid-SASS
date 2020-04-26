@@ -1,3 +1,7 @@
+.center {
+    text-align: center;
+}
+
 .section {
     width: 90%;
     margin: auto;
@@ -7,24 +11,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.flex-row-center > * {
-    margin: 2em;
-}
-
-.center {
-    text-align: center;
+    > * {
+        margin: 2em;
+    }
 }
 
 .all-mixins {
     display: flex;
     flex-flow: wrap;
     width: 80%;
-}
-
-.all-mixins > *{ 
-    margin: 1em 1em 1em 0;
+    @include max-width($width-mobile1) {
+        overflow-x: scroll;
+        flex-flow: initial;
+        width: 100%;
+        > * {
+            flex: none;
+            cursor: default;
+        }
+    }
+    > *{ 
+        margin: 1em 1em 1em 0;
+    }
 }
 
 .text-preview-animation {

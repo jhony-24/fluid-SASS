@@ -8,6 +8,9 @@
     right:  $size / -2;
     top:  $size / -2;
     box-shadow: 0 10px 1000px $secondary-color;
+    @include max-width($width-mobile1) {
+        display: none;
+    }
     > .text-circle {
         color: white;
         position: absolute;

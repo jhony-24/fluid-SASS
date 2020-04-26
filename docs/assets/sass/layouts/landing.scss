@@ -2,22 +2,32 @@
 .landing-section {
     margin-top: $height-header;
 }
+
 .landing-detail {
     margin: 1.5in auto 1.5in;
 }
+
 .title-ldg{
     font-weight: bold;
     font-size: 5em;
     text-shadow: 0 20px 20px rgba(0,0,0,.1);
+    @include max-width($width-mobile1) {
+        font-size: 3em;
+    }
+    .tp {
+        font-size: 2em;
+    }
+    .ts {
+        color: $secondary-color;
+        font-weight: normal;
+    }
 }
-.title-ldg .tp {
-    font-size: 2em;
-}
-.title-ldg .ts {
-    color: $secondary-color;
-    font-weight: normal;
-}
+
 .landing-message{
     margin: 20px auto;
     width: 35%;
+    @include max-width($width-mobile1) {
+        width: 80%;
+        font-size: 13px;
+    }
 }

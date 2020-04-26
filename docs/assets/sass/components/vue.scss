@@ -22,6 +22,9 @@
     background: $silver;
     text-align: center;
     transition: .3s background , .3s color;
+    @include max-width($width-mobile1) {
+        font-size: 13px;
+    }
     &:hover {
         @include bfg($primary-color,white);
         cursor: pointer;
@@ -40,10 +43,16 @@
         text-transform: uppercase;
         font-size: 1.6em;
         margin-bottom: 5px;
+        @include max-width($width-mobile1) {
+            font-size: 1em;
+        }
     }
     > .p-detail {
         color: $text-smooth;
         width: 80%;
+        @include max-width($width-mobile1) {
+            font-size: 13px;
+        }
     }
 }
 

@@ -11,6 +11,7 @@ const links = [
     { to: "#downloads", text: "downloads" },
 ];
 
+
 const completeLoading = function () {
     document.getElementById('app').style.visibility = 'visible';
     document.getElementById('loading-page').remove();
@@ -63,7 +64,7 @@ window.addEventListener('load', function () {
                 a.click();
             },
             downloadSASS: function () {
-
+                
             }
         }
     });
