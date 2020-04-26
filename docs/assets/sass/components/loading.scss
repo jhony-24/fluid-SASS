@@ -1,0 +1,26 @@
+.loading {
+    @include size(40px,40px,100%);
+    border:3px solid silver;
+    border-left-color: $primary-color;
+    animation: loading .5s infinite linear;
+    z-index: 100;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    @keyframes loading {
+        from {
+            transform: rotate(360deg);
+        }
+    }
+}
+
+
+#app {
+    visibility: hidden;
+    animation: showing-page 1s ease-out;
+    @keyframes showing-page {
+        from {
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.circle {
+    $size : 600px;
+    width: $size;
+    height:$size;
+    background: $secondary-color;
+    border-radius: 100%;
+    position: fixed;
+    right:  $size / -2;
+    top:  $size / -2;
+    box-shadow: 0 10px 1000px $secondary-color;
+    > .text-circle {
+        color: white;
+        position: absolute;
+        bottom: 25%;
+        left: 25%;
+        font-size: 1.3em;
+        font-weight: bold;
+        animation: text-circle .3s 1;
+        @keyframes text-circle {
+            from {
+                opacity: 0;
+            }
+        }
+    }
+}

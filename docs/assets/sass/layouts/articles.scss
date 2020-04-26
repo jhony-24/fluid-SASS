@@ -1,0 +1,34 @@
+.section {
+    width: 90%;
+    margin: auto;
+}
+
+.flex-row-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-row-center > * {
+    margin: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.all-mixins {
+    display: flex;
+    flex-flow: wrap;
+    width: 80%;
+}
+
+.all-mixins > *{ 
+    margin: 1em 1em 1em 0;
+}
+
+.text-preview-animation {
+    text-shadow: 0 20px 30px rgba(0,0,0,.2);
+    color: $primary-color;
+    font-size: 1.2em;
+}

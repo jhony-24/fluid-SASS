@@ -70,3 +70,13 @@
     @include flex(row,center,center);
     @include bfg($primary-color,white);
 }
+
+// square
+.square {
+    $size : 70px;
+    background: $primary-color;
+    width: $size;
+    height: $size;
+    margin: 2em auto;
+    border-radius: 10px;
+}

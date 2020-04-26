@@ -6,11 +6,16 @@
 "./base/reset";
 
 @import 
-"./components/all";
+"./components/vue",
+"./components/squarePreview",
+"./components/loading",
+"./components/circle";
 
 @import 
 "./layouts/header",
-"./layouts/footer";
+"./layouts/footer",
+"./layouts/articles",
+"./layouts/landing";
 
 
-// sass --no-source-maps --watch sass/main.scss:css/main.bundle.css --style=compressed 
+// sass --no-source-map --watch sass/main.scss:css/main.css --style=compressed 

@@ -8,7 +8,7 @@
 @mixin flex($dir: row, $align: center, $justify: none) {
   display: flex;
   flex-direction: $dir;
-  align-items: $alignItems;
+  align-items: $align;
   justify-content: $justify;
 }
 

@@ -1,0 +1,23 @@
+/*landing page*/
+.landing-section {
+    margin-top: $height-header;
+}
+.landing-detail {
+    margin: 1.5in auto 1.5in;
+}
+.title-ldg{
+    font-weight: bold;
+    font-size: 5em;
+    text-shadow: 0 20px 20px rgba(0,0,0,.1);
+}
+.title-ldg .tp {
+    font-size: 2em;
+}
+.title-ldg .ts {
+    color: $secondary-color;
+    font-weight: normal;
+}
+.landing-message{
+    margin: 20px auto;
+    width: 35%;
+}

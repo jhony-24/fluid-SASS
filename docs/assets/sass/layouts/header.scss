@@ -1,0 +1,20 @@
+.header {
+    background: $silver;
+    height: $height-header;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+.header .links {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+.header .links > * {
+    margin-right: 1in;
+    font-size: 14px;
+}
