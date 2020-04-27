@@ -42,7 +42,7 @@
                     <span class="tp">Fluid</span> <span class="ts">SASS</span>
                 </div>
                 <div class="center landing-message">
-                    <square name-animation="animate-square-landing"></square>
+                    <square-motion name-animation="animate-square-landing"></square-motion>
                     <text-smooth text="classes to create css animations and custom mixins for sass. Let's go."></text-smooth>
                     <br/>
                     <a href="#mixins"><i class="fa fa-chevron-down fa-2x"></i></a>
@@ -63,7 +63,7 @@
                         <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
                     </div>
                     <div class="preview-change-animation">
-                        <square :name-animation="currentAnimation"></square>
+                        <square-motion :name-animation="currentAnimation"></square-motion>
                         <h1 class="center text-preview-animation">{{textAnimationSelected}}</h1>
                     </div>
                 </div>
@@ -83,7 +83,7 @@
                         </div>
                         <div class="center">
                             <circle-button @onclick="downloadSASS" bg="silver" icon="fa fa-download" ></circle-button>
-                            <h3>sass</h3>
+                            <h2>sass</h2>
                         </div>
                     </div>    
                 </div>

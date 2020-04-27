@@ -36,7 +36,7 @@ Vue.component('card', {
 });
 
 
-const Square = {
+const SquareMotion = {
     props: {
         nameAnimation: {
             type: String,

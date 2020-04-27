@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
             selectedLink: window.location.hash,
         },
 
-        components: { Square, TypeAnimation, CircleButton },
+        components: { SquareMotion, TypeAnimation, CircleButton },
 
         computed: {
             allAnimations: function () {
