@@ -1,0 +1,22 @@
+// bounce animations
+@mixin fluid-bounce { @include keyframes-bounce(); }
+@mixin fluid-bounce-inset { @include keyframes-bounce-inset(); }
+@mixin fluid-bounce-rotate { @include keyframes-bounce-rotate(); }
+
+// fade animations
+@mixin fluid-fade { @include keyframes-fade(); }
+@mixin fluid-fade-intermittent { @include keyframes-fade-intermittent(); }
+@mixin fluid-fade-left { @include keyframes-fade-left(); }
+@mixin fluid-fade-right { @include keyframes-fade-right(); }
+
+// from animations
+@mixin fluid-from-left { @include keyframes-from-left(); }
+@mixin fluid-from-right { @include keyframes-from-right(); }
+@mixin fluid-from-top { @include keyframes-from-top(); }
+@mixin fluid-from-bottom { @include keyframes-from-bottom(); }
+
+// shake animations
+@mixin fluid-shake { @include keyframes-shake(); }
+@mixin fluid-shake-rotate { @include keyframes-shake(); }
+@mixin fluid-shake-vertical { @include keyframes-shake(); }
+@mixin fluid-shake-cross { @include keyframes-shake(); }

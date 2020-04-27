@@ -16,7 +16,7 @@ function sassTask() {
 }
 
 function defaultTask() {
-    watch("sass/*.scss", series("sass"))
+    watch("sass/**/*.scss", series("sass"))
 }
 
 task("sass", sassTask);

@@ -4,7 +4,9 @@ $bounce : bounce;
     @include transform(defineTransforms($transforms)); 
 }
 
-.#{$bounce} {
+
+
+@mixin keyframes-bounce {
     @include animation(( name : bounce , duration : .3s )){
         50%{
             @include bounce((scale:1.5));
@@ -17,16 +19,24 @@ $bounce : bounce;
         }
     }
 }
+// .#{$bounce} { @include keyframes-bounce() }
 
-.#{$bounce}-inset {
+
+
+
+@mixin keyframes-bounce-inset {
     @include animation((name : bounce-inset , duration : .3s)) {
         50% {
             @include bounce((scale:.5));
         }
     }
 }
+// .#{$bounce}-inset { @include keyframes-bounce-inset(); }
 
-.#{$bounce}-rotate {
+
+
+
+@mixin keyframes-bounce-rotate {
     @include animation((name : bounce-rotate , duration : .8s)) {
         from {
             @include bounce((scale:1));
@@ -37,6 +47,7 @@ $bounce : bounce;
         100% {
             @include bounce((scale:.8, rotate : 0deg));
         }
-    }
+    }    
 }
+// .#{$bounce}-rotate { @include keyframes-bounce-rotate(); }
 

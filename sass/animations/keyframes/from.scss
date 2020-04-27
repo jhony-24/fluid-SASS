@@ -1,10 +1,13 @@
 $from : from;
 
+
 @mixin from($transforms) {
     @include transform(defineTransforms($transforms)); 
 }
 
-.#{$from}-left {
+
+
+@mixin  keyframes-from-left {
     @include animation(( name : from-left , duration : .3s )){
         10% {
             @include from((translateX:-100%));
@@ -12,10 +15,14 @@ $from : from;
         60% {
             @include from((translateX:20px));
         }
-    }
+    }    
 }
+// .#{$from}-left { @include keyframes-from-left(); }
 
-.#{$from}-right {
+
+
+
+@mixin keyframes-from-right {
     @include animation(( name : from-right , duration : .3s )){
         10% {
             @include from(( translateX : 100% )); 
@@ -25,8 +32,12 @@ $from : from;
         }
     }
 }
+// .#{$from}-right { @include keyframes-from-right(); }
 
-.#{$from}-top {
+
+
+
+@mixin keyframes-from-top {
     @include animation(( name : from-top , duration : .3s )){
         10% {
             @include from(( translateY : -100% )); 
@@ -36,8 +47,12 @@ $from : from;
         }
     }
 }
+// .#{$from}-top { @include keyframes-from-top(); }
 
-.#{$from}-bottom {
+
+
+
+@mixin keyframes-from-bottom {
     @include animation(( name : from-bottom , duration : .3s )){
         10% {
             @include from(( translateY : 100% )); 
@@ -47,3 +62,5 @@ $from : from;
         }
     }
 }
+// .#{$from}-bottom { @include keyframes-from-bottom(); }
+
