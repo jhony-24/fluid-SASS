@@ -1,12 +1,6 @@
-$shake : shake;
-
-
 @mixin shake($transforms){
     @include transform(defineTransforms($transforms)); 
 }
-
-
-
 
 @mixin keyframes-shake {
     @include animation(( name : shake , duration : .3s )){
@@ -18,10 +12,6 @@ $shake : shake;
         }
     }
 }
-// .#{$shake} { @include keyframes-shake(); }
-
-
-
 
 @mixin keyframes-shake-rotate {
     @include animation((name : shake-spring , duration : .3s)) {
@@ -33,10 +23,6 @@ $shake : shake;
         }
     }
 }
-// .#{$shake}-rotate { @include keyframes-shake-rotate(); }
-
-
-
 
 @mixin keyframes-shake-vertical {
     @include animation((name : shake-vertical , duration : .3s)) {
@@ -48,10 +34,6 @@ $shake : shake;
         }
     }
 }
-// .#{$shake}-vertical { @include keyframes-shake-vertical(); }
-
-
-
 
 @mixin keyframes-shake-cross {
     @include animation((name : shake-cross , duration : .4s)) {
@@ -70,4 +52,3 @@ $shake : shake;
     
     }
 }
-// .#{$shake}-cross { @include keyframes-shake-cross(); }

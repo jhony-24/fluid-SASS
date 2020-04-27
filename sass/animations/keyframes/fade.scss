@@ -1,10 +1,6 @@
-$fade : fade;
-
 @mixin fade($transforms) {
     @include transform(defineTransforms($transforms)); 
 }
-
-
 
 @mixin keyframes-fade {
     @include animation(( name : fade , duration : .3s )){
@@ -13,10 +9,6 @@ $fade : fade;
         }
     }
 }
-// .#{$fade} { @include keyframes-fade(); }
-
-
-
 
 @mixin keyframes-fade-intermittent {
     $maxFrames : 20;
@@ -30,10 +22,6 @@ $fade : fade;
         }
     }
 }
-// .#{$fade}-intermittent { @include keyframes-fade-intermittent(); }
-
-
-
 
 @mixin keyframes-fade-left {
     @include animation(( name : fade-left , duration : .3s )) {
@@ -46,10 +34,6 @@ $fade : fade;
         }
     }
 }
-// .#{$fade}-left { @include keyframes-fade-left(); }
-
-
-
 
 @mixin keyframes-fade-right {
     @include animation(( name : fade-right , duration : .3s )) {
@@ -62,4 +46,3 @@ $fade : fade;
         }
     }
 }
-// .#{$fade}-right { @include keyframes-fade-right(); }

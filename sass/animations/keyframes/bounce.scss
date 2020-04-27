@@ -1,10 +1,6 @@
-$bounce : bounce;
-
 @mixin bounce($transforms) {
     @include transform(defineTransforms($transforms)); 
 }
-
-
 
 @mixin keyframes-bounce {
     @include animation(( name : bounce , duration : .3s )){
@@ -19,10 +15,6 @@ $bounce : bounce;
         }
     }
 }
-// .#{$bounce} { @include keyframes-bounce() }
-
-
-
 
 @mixin keyframes-bounce-inset {
     @include animation((name : bounce-inset , duration : .3s)) {
@@ -31,10 +23,6 @@ $bounce : bounce;
         }
     }
 }
-// .#{$bounce}-inset { @include keyframes-bounce-inset(); }
-
-
-
 
 @mixin keyframes-bounce-rotate {
     @include animation((name : bounce-rotate , duration : .8s)) {
@@ -49,5 +37,4 @@ $bounce : bounce;
         }
     }    
 }
-// .#{$bounce}-rotate { @include keyframes-bounce-rotate(); }
 
