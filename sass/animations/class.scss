@@ -1,22 +1,30 @@
 // bounce classes
-.bounce { @include keyframes-bounce() }
-.bounce-inset { @include keyframes-bounce-inset(); }
-.bounce-rotate { @include keyframes-bounce-rotate(); }
+.bounce {
+    @include keyframes-bounce();
+    &-inset {  @include keyframes-bounce-inset(); }
+    &-rotate { @include keyframes-bounce-rotate(); }
+}
 
 // fade classes
-.fade { @include keyframes-fade(); }
-.fade-intermittent { @include keyframes-fade-intermittent(); }
-.fade-left { @include keyframes-fade-left(); }
-.fade-right { @include keyframes-fade-right(); }
+.fade {
+    @include keyframes-fade(); 
+    &-intermittent { @include keyframes-fade-intermittent(); }
+    &-left { @include keyframes-fade-left(); }
+    &-right { @include keyframes-fade-right(); }
+}
 
 // fade classes
-.from-left { @include keyframes-from-left(); }
-.from-right { @include keyframes-from-right(); }
-.from-top { @include keyframes-from-top(); }
-.from-bottom { @include keyframes-from-bottom(); }
+.from {
+    &-left { @include keyframes-from-left(); }
+    &-right { @include keyframes-from-right(); }
+    &-top { @include keyframes-from-top(); }
+    &-bottom { @include keyframes-from-bottom(); }
+}
 
 // shake classes    
-.shake { @include keyframes-shake(); }
-.shake-rotate { @include keyframes-shake-rotate(); }
-.shake-vertical { @include keyframes-shake-vertical(); }
-.shake-cross { @include keyframes-shake-cross(); }
+.shake { 
+    @include keyframes-shake(); 
+    &-rotate { @include keyframes-shake-rotate(); }
+    &-vertical { @include keyframes-shake-vertical(); }
+    &-cross { @include keyframes-shake-cross(); }
+}
