@@ -1,47 +1,33 @@
-@mixin from($transforms) {
-    @include transform(defineTransforms($transforms)); 
+@mixin from($percentage,$transforms) {
+    #{$percentage}{
+        @include transform(defineTransforms($transforms)); 
+    }
 }
 
 @mixin  keyframes-from-left {
     @include animation(( name : from-left , duration : .3s )){
-        10% {
-            @include from((translateX:-100%));
-        }
-        60% {
-            @include from((translateX:20px));
-        }
+        @include from(10%,(translateX:-100%));
+        @include from(60%,(translateX:20px));
     }    
 }
 
 @mixin keyframes-from-right {
     @include animation(( name : from-right , duration : .3s )){
-        10% {
-            @include from(( translateX : 100% )); 
-        }
-        60% {
-            @include from(( translateX : -20px )); 
-        }
+        @include from(10%,( translateX : 100% )); 
+        @include from(60%,( translateX : -20px )); 
     }
 }
 
 @mixin keyframes-from-top {
     @include animation(( name : from-top , duration : .3s )){
-        10% {
-            @include from(( translateY : -100% )); 
-        }
-        60% {
-            @include from(( translateY : 20px )); 
-        }
+        @include from(10%,( translateY : -100% )); 
+        @include from(60%,( translateY : 20px )); 
     }
 }
 
 @mixin keyframes-from-bottom {
     @include animation(( name : from-bottom , duration : .3s )){
-        10% {
-            @include from(( translateY : 100% )); 
-        }
-        60% {
-            @include from(( translateY : -20px )); 
-        }
+        @include from(10%,( translateY : 100% )); 
+        @include from(60%,( translateY : -20px )); 
     }
 }
