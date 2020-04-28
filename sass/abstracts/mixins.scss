@@ -16,3 +16,10 @@
 @mixin transform($mapTransform) {
   transform: $mapTransform;
 }
+
+
+@mixin frame($percentage,$transforms){
+  #{$percentage}{
+      @include transform(defineTransforms($transforms)); 
+  }
+}

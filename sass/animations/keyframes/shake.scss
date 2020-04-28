@@ -1,35 +1,29 @@
-@mixin shake($percentage,$transforms){
-    #{$percentage}{
-        @include transform(defineTransforms($transforms)); 
-    }
-}
-
 @mixin keyframes-shake {
     @include animation(( name : shake , duration : .3s )){
-        @include shake( (0%,50%), ( translateX : 10px )); 
-        @include shake( (30%,100%), ( translateX : -10px )); 
+        @include frame( (0%,50%), ( translateX : 10px )); 
+        @include frame( (30%,100%), ( translateX : -10px )); 
     }
 }
 
 @mixin keyframes-shake-rotate {
     @include animation((name : shake-spring , duration : .3s)) {
-        @include shake( (0%,50%), ( translateX : 10px , rotate : 20deg  )); 
-        @include shake( (30%,100%), ( translateX : -10px , rotate : -20deg )); 
+        @include frame( (0%,50%), ( translateX : 10px , rotate : 20deg  )); 
+        @include frame( (30%,100%), ( translateX : -10px , rotate : -20deg )); 
     }
 }
 
 @mixin keyframes-shake-vertical {
     @include animation((name : shake-vertical , duration : .3s)) {
-        @include shake( (0%,50%), ( translateY : 10px )); 
-        @include shake( (30%,100%), ( translateY : -10px )); 
+        @include frame( (0%,50%), ( translateY : 10px )); 
+        @include frame( (30%,100%), ( translateY : -10px )); 
     }
 }
 
 @mixin keyframes-shake-cross {
     @include animation((name : shake-cross , duration : .4s)) {
-        @include shake( (0%,50%), ( translateX : 10px )); 
-        @include shake( (10%,60%), ( translateY : 10px )); 
-        @include shake( (20%,70%), ( translateY : -10px )); 
-        @include shake( (30%,100%), ( translateX : -10px )); 
+        @include frame( (0%,50%), ( translateX : 10px )); 
+        @include frame( (10%,60%), ( translateY : 10px )); 
+        @include frame( (20%,70%), ( translateY : -10px )); 
+        @include frame( (30%,100%), ( translateX : -10px )); 
     }
 }
