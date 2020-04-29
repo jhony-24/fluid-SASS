@@ -3,6 +3,13 @@ var completeLoading = function () {
     document.getElementById('loading-page').remove();
 }
 
+var downloadFile = function (path, filename) {
+    let a = document.createElement('a');
+    a.href = path + filename;
+    a.download = filename;
+    a.target = '_blank';
+    a.click();
+}
 
 window.addEventListener('load', function () {
 
@@ -11,14 +18,10 @@ window.addEventListener('load', function () {
     var components = { SquareMotion, TypeAnimation, CircleButton }
     var methodsDownload = {
         downloadCSS: function () {
-            let a = document.createElement('a');
-            a.href = 'assets/css/animations.css';
-            a.download = 'animations.css';
-            a.target = "_blank";
-            a.click();
+            downloadFile('assets/css/','animations.css');
         },
         downloadSASS: function () {
-
+            downloadFile('assets/zip/','sass.zip');
         }
     }
     var methodsAnimationSquare = {

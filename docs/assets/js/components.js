@@ -1,3 +1,4 @@
+// global components
 Vue.component('detail-section', {
     template: `<div class="detail-section">
     <slot name="header"></slot>
@@ -35,7 +36,7 @@ Vue.component('card', {
     template: `<div class="card"><strong>{{title}}</strong><slot></slot></div>`
 });
 
-
+// main app components
 const SquareMotion = {
     props: {
         nameAnimation: {
