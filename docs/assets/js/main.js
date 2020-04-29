@@ -1,72 +1,65 @@
-const typesAnimation = [
-    "bounce", "bounce-inset", "bounce-rotate",
-    "fade", "fade-intermittent", "fade-left", "fade-right",
-    "from-left", "from-right", "from-top", "from-bottom",
-    "shake", "shake-rotate", "shake-vertical", "shake-cross"
-];
-
-const links = [
-    { to: "#home", text: "home" },
-    { to: "#mixins", text: "mixins and class" },
-    { to: "#downloads", text: "downloads" },
-];
-
-
-const completeLoading = function () {
+var completeLoading = function () {
     document.getElementById('app').style.visibility = 'visible';
     document.getElementById('loading-page').remove();
 }
 
 
 window.addEventListener('load', function () {
+
     completeLoading();
-    new Vue({
-        el: '#app',
-        data: {
-            typesAnimation,
-            currentAnimation: '',
-            links,
-            selectedLink: window.location.hash,
+
+    var components = { SquareMotion, TypeAnimation, CircleButton }
+    var methodsDownload = {
+        downloadCSS: function () {
+            let a = document.createElement('a');
+            a.href = 'assets/css/animations.css';
+            a.download = 'animations.css';
+            a.target = "_blank";
+            a.click();
         },
+        downloadSASS: function () {
 
-        components: { SquareMotion, TypeAnimation, CircleButton },
-
-        computed: {
-            allAnimations: function () {
-                return this.typesAnimation;
-            },
-            textAnimationSelected: function () {
-                let current = this.currentAnimation;
-                return (current !== '') ? ('! ' + current) : '';
-            },
-            classSelected: function () {
-                let current = this.currentAnimation;
-                return function (text) {
-                    return {
-                        'type-animation-selected': (current === text)
-                    };
-                }
-            }
+        }
+    }
+    var methodsAnimationSquare = {
+        selectAnimation: function (text) {
+            this.currentAnimation = text;
         },
-
-        methods: {
-            selectAnimation: function (text) {
-                this.currentAnimation = text;
-            },
-            onLinkSelected: function (to) {
-                this.selectedLink = to;
-            },
-            downloadCSS: function () {
-                let a = document.createElement('a');
-                a.href = 'assets/css/animations.css';
-                a.download = 'animations.css';
-                a.target = "_blank";
-                a.click();
-            },
-            downloadSASS: function () {
-                
+        onLinkSelected: function (to) {
+            this.selectedLink = to;
+        },
+    }
+    var computedAnimations = {
+        allAnimations: function () {
+            return this.typesAnimation;
+        },
+        textAnimationSelected: function () {
+            let current = this.currentAnimation;
+            return (current !== '') ? ('! ' + current) : '';
+        },
+        classSelected: function () {
+            let current = this.currentAnimation;
+            return function (text) {
+                return {
+                    'type-animation-selected': (current === text)
+                };
             }
         }
+    }
+
+    const initialState = {
+        typesAnimation,
+        currentAnimation: '',
+        links,
+        selectedLink: window.location.hash,
+    }
+
+    new Vue({
+        el: '#app',
+        data: initialState,
+        components: { ...components },
+        computed: { ...computedAnimations },
+        methods: { ...methodsAnimationSquare, ...methodsDownload }
     });
 
 });
