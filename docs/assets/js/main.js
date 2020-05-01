@@ -17,12 +17,8 @@ window.addEventListener('load', function () {
 
     var components = { SquareMotion, TypeAnimation, CircleButton }
     var methodsDownload = {
-        downloadCSS: function () {
-            downloadFile('assets/css/','animations.css');
-        },
-        downloadSASS: function () {
-            downloadFile('assets/zip/','sass.zip');
-        }
+        downloadCSS: function () { downloadFile('assets/css/', 'animations.css'); },
+        downloadSASS: function () { downloadFile('assets/zip/', 'sass.zip'); }
     }
     var methodsAnimationSquare = {
         selectAnimation: function (text) {
@@ -30,6 +26,19 @@ window.addEventListener('load', function () {
         },
         onLinkSelected: function (to) {
             this.selectedLink = to;
+            let getOnlyId = this.selectedLink.replace('#', '');
+            let offsetTop = document.getElementById(getOnlyId).offsetTop;
+            let i = 0;
+            let minHeight = 144;
+            let duration = 1;
+            let interval = setInterval(function () {
+                if (i >= offsetTop) {
+                    clearInterval(interval);
+                }
+                i += 10;
+                window.scrollTo(0, i - minHeight);
+            }, duration);
+            document.title = "Fluid-sass | " + getOnlyId;
         },
     }
     var computedAnimations = {

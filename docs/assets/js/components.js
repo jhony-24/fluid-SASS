@@ -12,7 +12,8 @@ Vue.component('strong-link', {
         {{text}} <i class="fa fa-chevron-down "></i>
     </a>`,
     methods: {
-        onClick: function () {
+        onClick: function (e) {
+            e.preventDefault();
             this.$emit("onclick");
         }
     }
