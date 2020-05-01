@@ -27,7 +27,7 @@ Vue.component('text-smooth', {
 Vue.component('paragraph-detail', {
     props: ['title', 'detail', 'id'],
     template: `<div class="paragraph" :id="id">
-    <div class="p-title"><span class="sp">{{title}}</span></div>
+    <div class="p-title"><i class="iconic fa fa-paperclip"></i> <span class="sp">{{title}}</span></div>
     <div class="p-detail">{{detail}}</div>
     </div>`
 });

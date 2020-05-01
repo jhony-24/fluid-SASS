@@ -43,6 +43,9 @@
         text-transform: uppercase;
         font-size: 1.6em;
         margin-bottom: 5px;
+        .iconic {
+            font-size: .8em;
+        }
         @include max-width($width-mobile1) {
             font-size: 1em;
         }
@@ -50,8 +53,10 @@
     > .p-detail {
         color: $text-smooth;
         width: 80%;
+        padding-left: 1.5em;
         @include max-width($width-mobile1) {
             font-size: 13px;
+            width: 100%;
         }
     }
 }
@@ -97,6 +102,9 @@
     background: rgba(0,0,0,.02);
     @include max-width($width-mobile1) {
         overflow-x: scroll;
+        .format-code {
+            font-size: .9em;
+        }
     }
     > * {
         padding: 10px;
