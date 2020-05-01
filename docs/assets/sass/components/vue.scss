@@ -89,3 +89,24 @@
     margin: 2em auto;
     border-radius: 10px;
 }
+
+// template code with your name
+.template-code {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0,0,0,.02);
+    @include max-width($width-mobile1) {
+        overflow-x: scroll;
+    }
+    > * {
+        padding: 10px;
+    }
+    .title {
+        font-weight: bold;
+    }
+    .preview-code {
+        .format-code {
+            white-space: pre-line;
+        }
+    }
+}

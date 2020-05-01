@@ -68,7 +68,6 @@
                     </div>
                     <div class="preview-change-animation">
                         <square-motion :name-animation="currentAnimation"></square-motion>
-                        <h1 class="center text-preview-animation">{{textAnimationSelected}}</h1>
                     </div>
                 </div>
             </detail-section>
@@ -79,30 +78,32 @@
                     detail="See a sample of how to integrate developing code with css and sass language">
                 </paragraph-detail>
                 <div slot="body">
-                    <template-code language="html">
-                        &lt;!-- include class names --&gt;
-                        &lt;button class="button-primary my-animation" id="btn" &gt; 
-                            primary 
-                        &lt;/button&gt;
-                        &lt;article class="card my-animation" &gt; 
-                            new article 
-                        &lt;/article&gt;
-                    </template-code>
-                    <template-code language="css">
-                        // include in my class personalize 
-                        // add the prefix "fluid-" in the mixin 
-                        .my-animation {
-                            @include fluid-bounce();
-                        }
-                    </template-code>
-                    <template-code language="js">
-                        /* alternate my class name */
-                        function toggleClass(e) {
-                            e.currentTarget.classList.toggle('my-animation');
-                        }
-                        let myButton = document.getElementById('btn');
-                        byButton.addEventListener('click',toggleClass);
-                    </template-code>
+                    <div class="examples-languages">
+                        <template-code language="html">
+                            &lt;!-- include class names --&gt;
+                            &lt;button class="button-primary my-animation" id="btn" &gt; 
+                                primary 
+                            &lt;/button&gt;
+                            &lt;article class="card my-animation" &gt; 
+                                new article 
+                            &lt;/article&gt;
+                        </template-code>
+                        <template-code language="css">
+                            // include in my class personalize 
+                            // add the prefix "fluid-" in the mixin 
+                            .my-animation {
+                                @include fluid-bounce();
+                            }
+                        </template-code>
+                        <template-code language="js">
+                            /* alternate my class name */
+                            function toggleClass(e) {
+                                e.currentTarget.classList.toggle('my-animation');
+                            }
+                            let myButton = document.getElementById('btn');
+                            byButton.addEventListener('click' , toggleClass);
+                        </template-code>
+                    </div>
                 </div>
             </detail-section>
             <detail-section>
