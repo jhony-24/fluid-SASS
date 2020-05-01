@@ -9,7 +9,8 @@
 "./components/vue",
 "./components/squarePreview",
 "./components/loading",
-"./components/circle";
+"./components/circle",
+"./components/buttonDownloads";
 
 @import 
 "./layouts/header",
@@ -18,4 +19,4 @@
 "./layouts/landing";
 
 
-// sass --no-source-map --watch sass/main.scss:css/main.css --style=compressed 
+// sass --no-source-map --watch docs/assets/sass/main.scss:docs/assets/css/main.css --style=compressed 
