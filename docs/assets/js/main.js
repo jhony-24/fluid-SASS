@@ -15,7 +15,7 @@ window.addEventListener('load', function () {
 
     completeLoading();
 
-    var components = { SquareMotion, TypeAnimation, CircleButton }
+    var components = { SquareMotion, TypeAnimation, CircleButton, TemplateCode };
     var methodsDownload = {
         downloadCSS: function () { downloadFile('assets/css/', 'animations.css'); },
         downloadSASS: function () { downloadFile('assets/zip/', 'sass.zip'); }
