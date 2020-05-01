@@ -20,8 +20,7 @@
     <script src="./assets/js/data.js"></script>
     <script defer src="./assets/js/main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-</head>
+</head> 
 
 <body>
     <div class="loading" id="loading-page"></div>
@@ -78,9 +77,39 @@
                     slot="header"
                     title="HOW TO INTEGRATE:"
                     detail="See a sample of how to integrate developing code with css and sass language">
-                <div slot="body">
-                </div>
                 </paragraph-detail>
+                <div slot="body">
+                    <pre class="format-code">
+                        <code class="css">
+                            &lt;!-- include class names --&gt;
+                            &lt;button class="button-primary my-animation" id="btn" &gt; 
+                                primary 
+                            &lt;/button&gt;
+                            &lt;article class="card my-animation" &gt; 
+                                new article 
+                            &lt;/article&gt;
+                        </code>
+                    </pre>
+                    <pre class="format-code">
+                        <code class="sass">
+                            // include in my class personalize 
+                            // add the prefix "fluid-" in the mixin 
+                            .my-animation {
+                                @include fluid-bounce();
+                            }
+                        </code>
+                    </pre>
+                    <pre class="format-code">
+                        <code class="js">
+                            /* alternate my class name */
+                            function toggleClass(e) {
+                                e.currentTarget.classList.toggle('my-animation');
+                            }
+                            let myButton = document.getElementById('btn');
+                            byButton.addEventListener('click',toggleClass);
+                        </code>
+                    </pre>
+                </div>
             </detail-section>
             <detail-section>
                 <paragraph-detail 
@@ -113,7 +142,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
