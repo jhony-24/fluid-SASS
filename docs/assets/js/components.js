@@ -82,12 +82,22 @@ const TemplateCode = {
     template: `<div class="template-code">
         <div class="title title-language">
             <span class="text">{{language}}</span>
-            <button class="copy-button">copy</button>
+            <button class="copy-button" @click="onCopyToClipboard">copy</button>
         </div>
         <div class="preview-code">
             <pre class="format-code">
-                <code :class="[language]"><slot></slot></code>
+                <code :class="[language]" ref="code"><slot></slot></code>
             </pre>
         </div>
-    </div>`
+    </div>`,
+    methods: {
+        onCopyToClipboard: function () {
+            let rangeCopy = document.createRange();
+            rangeCopy.selectNode(this.$refs.code);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(rangeCopy);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+        }
+    }
 }
