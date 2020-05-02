@@ -80,7 +80,10 @@ const CircleButton = {
 const TemplateCode = {
     props: ["language"],
     template: `<div class="template-code">
-        <div class="title title-language">{{language}}</div>
+        <div class="title title-language">
+            <span class="text">{{language}}</span>
+            <button class="copy-button">copy</button>
+        </div>
         <div class="preview-code">
             <pre class="format-code">
                 <code :class="[language]"><slot></slot></code>
