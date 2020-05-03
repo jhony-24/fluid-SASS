@@ -23,6 +23,10 @@ window.addEventListener('load', function () {
     var methodsAnimationSquare = {
         selectAnimation: function (text) {
             this.currentAnimation = text;
+            document.querySelector('.square-main').addEventListener('webkitAnimationEnd', (event) => {
+                event.target.classList.remove(this.currentAnimation);
+                this.currentAnimation = '';
+            });
         },
         onLinkSelected: function (to) {
             this.selectedLink = to;

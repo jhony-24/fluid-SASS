@@ -67,7 +67,7 @@
                         <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
                     </div>
                     <div class="preview-change-animation">
-                        <square-motion :name-animation="currentAnimation"></square-motion>
+                        <square-motion class="square-main" :name-animation="currentAnimation"></square-motion>
                     </div>
                 </div>
             </detail-section>
