@@ -7,6 +7,9 @@
     margin: 1.5in auto 1.5in;
 }
 
+.title-ldg,.landing-message {
+    user-select: none;
+}
 .title-ldg{
     font-weight: bold;
     font-size: 5em;
