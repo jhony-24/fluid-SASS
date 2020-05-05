@@ -103,6 +103,7 @@ const TemplateCode = {
             window.getSelection().addRange(rangeCopy);
             document.execCommand('copy');
             window.getSelection().removeAllRanges();
+            this.$emit("copy-click");
         }
     }
 }

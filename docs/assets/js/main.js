@@ -23,7 +23,7 @@ window.addEventListener('load', function () {
 
     // all components in app
     var components = { SquareMotion, TypeAnimation, CircleButton, TemplateCode };
-    
+
     // all methods to downlaod all files
     var methodsDownload = {
         downloadCSS: function () { downloadFile(this, 'assets/css/', 'animations.css'); },
@@ -76,6 +76,15 @@ window.addEventListener('load', function () {
         }
     }
 
+    var methodsExample = {
+        copied: function () {
+            this.isCopy = true;
+            setTimeout(function() {
+                this.isCopy = false;
+            }.bind(this),2000);
+        }
+    }
+
     // initial state of the app
     const initialState = {
         typesAnimation,
@@ -93,7 +102,7 @@ window.addEventListener('load', function () {
         data: initialState,
         components: { ...components },
         computed: { ...computedAnimations },
-        methods: { ...methodsAnimationSquare, ...methodsDownload }
+        methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample }
     });
 
 });
