@@ -1,27 +1,33 @@
 .header {
-    background: $silver;
-    height: $height-header;
-    width: 100%;
+  background: $silver;
+  height: $height-header;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  margin: auto;
+  .links {
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    .links {
-        display: flex;
-        align-items: center;
-        width: 80%;
-        margin: auto;
-        @include max-width($width-mobile1) {
-            width: 100%;
-        }
-        > * {
-            margin-right: 1in;
-            font-size: 13px;
-            @include max-width($width-mobile1) {
-                margin:0 auto;
-                cursor: default;
-            }        
-        }
+    width: 80%;
+    margin: auto;
+    > * {
+      margin-right: 1in;
+      font-size: 13px;
     }
+  }
+  @include max-width($width-mobile1) {
+    overflow-x: scroll;
+    width: 100%;
+    .links {
+      width: auto;
+      > * {
+        width: max-content;
+        margin: 0 1em;
+        cursor: default;
+      }
+    }
+  }
 }
