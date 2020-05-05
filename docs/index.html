@@ -78,29 +78,8 @@
                 </paragraph-detail>
                 <div slot="body">
                     <div class="examples-languages">
-                        <template-code language="html" @copy-click="copied">
-                            &lt;!-- include class names --&gt;
-                            &lt;button class="btn my-animation" id="btn" &gt; 
-                            &emsp;&emsp;primary 
-                            &lt;/button&gt;
-                            &lt;article class="card my-animation" &gt; 
-                            &emsp;&emsp;new article 
-                            &lt;/article&gt;
-                        </template-code>
-                        <template-code language="css" @copy-click="copied">
-                            // include in my class personalize 
-                            // add the prefix "fluid-" in the mixin 
-                            .my-animation {
-                            &emsp;&emsp;@include fluid-bounce();
-                            }
-                        </template-code>
-                        <template-code language="js" @copy-click="copied">
-                            /* alternate my class name */
-                            function toggleClass(e) {
-                            &emsp;&emsp;e.currentTarget.classList.toggle('my-animation');
-                            }
-                            let myButton = document.getElementById('btn');
-                            byButton.addEventListener('click' , toggleClass);
+                        <template-code v-for="i in examples" :language="i.language" @copy-click="copied">
+                            {{i.code}}
                         </template-code>
                         <simple-toast v-if="isCopy" message="codigo copiado"></simple-toast>
                     </div>

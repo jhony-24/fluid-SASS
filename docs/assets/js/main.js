@@ -89,6 +89,7 @@ window.addEventListener('load', function () {
     const initialState = {
         typesAnimation,
         links,
+        examples,
         currentAnimation: '',
         selectedLink: window.location.hash,
         totalAnimations: typesAnimation.length,
