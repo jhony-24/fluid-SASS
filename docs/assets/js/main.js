@@ -3,12 +3,16 @@ var completeLoading = function () {
     document.getElementById('loading-page').remove();
 }
 
-var downloadFile = function (path, filename) {
+var downloadFile = function (self,path, filename) {
     let a = document.createElement('a');
     a.href = path + filename;
     a.download = filename;
     a.target = '_blank';
     a.click();
+    self.isDownload = true;
+    setTimeout(function(){
+        self.isDownload = false;
+    },1000);
 }
 
 window.addEventListener('load', function () {
@@ -17,8 +21,8 @@ window.addEventListener('load', function () {
 
     var components = { SquareMotion, TypeAnimation, CircleButton, TemplateCode };
     var methodsDownload = {
-        downloadCSS: function () { downloadFile('assets/css/', 'animations.css'); },
-        downloadSASS: function () { downloadFile('assets/zip/', 'sass.zip'); }
+        downloadCSS: function () { downloadFile(this,'assets/css/', 'animations.css'); },
+        downloadSASS: function () { downloadFile(this,'assets/zip/', 'sass.zip'); }
     }
     var methodsAnimationSquare = {
         selectAnimation: function (text) {
@@ -65,10 +69,12 @@ window.addEventListener('load', function () {
 
     const initialState = {
         typesAnimation,
-        currentAnimation: '',
         links,
+        currentAnimation: '',
         selectedLink: window.location.hash,
-        totalAnimations : typesAnimation.length
+        totalAnimations: typesAnimation.length,
+        isDownload: false,
+        isCopy: false,
     }
 
     new Vue({
