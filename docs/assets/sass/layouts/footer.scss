@@ -1,12 +1,51 @@
 .footer {
-    height: 60px;
-    background: $silver;
+  padding: 2em 0 1em;
+  background: linear-gradient(
+    185deg,
+    lighten($primary-color, 40) 50%,
+    darken($silver, 0) 50%
+  );
+  .sub-footer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column-reverse;
     align-items: center;
-    @include max-width($width-mobile1) {
-        .flag-text {
-            font-size: .9em;
-        }
+    .image-motive {
+      width: 320px;
+      -webkit-user-drag: none;
+      margin-top: 2em;
     }
+    .motive {
+      font-size: 2em;
+      text-align: center;
+      text-transform: uppercase;
+      color: $primary-color;
+      margin-top: 1em;
+      width: 50%;
+      font-weight: normal;
+      letter-spacing: 5px;
+      span[class^="l-"] {
+        color: $primary-color;
+        font-size: 1.6em;
+      }
+      @include max-width($width-mobile1) {
+        font-size: 1.5em;
+        width: 90%;
+      }
+    }
+  }
+  > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .sup-footer {
+    .flag-text {
+      margin: 50px 20px 20px;
+    }
+  }
+  @include max-width($width-mobile1) {
+    .flag-text {
+      font-size: 0.9em;
+    }
+  }
 }
