@@ -5,6 +5,7 @@
     lighten($primary-color, 40) 50%,
     darken($silver, 0) 50%
   );
+  user-select: none;
   .sub-footer {
     display: flex;
     flex-direction: column-reverse;
