@@ -80,24 +80,24 @@
                     <div class="examples-languages">
                         <template-code language="html">
                             &lt;!-- include class names --&gt;
-                            &lt;button class="button-primary my-animation" id="btn" &gt; 
-                                primary 
+                            &lt;button class="btn my-animation" id="btn" &gt; 
+                            &emsp;&emsp;primary 
                             &lt;/button&gt;
                             &lt;article class="card my-animation" &gt; 
-                                new article 
+                            &emsp;&emsp;new article 
                             &lt;/article&gt;
                         </template-code>
                         <template-code language="css">
                             // include in my class personalize 
                             // add the prefix "fluid-" in the mixin 
                             .my-animation {
-                                @include fluid-bounce();
+                            &emsp;&emsp;@include fluid-bounce();
                             }
                         </template-code>
                         <template-code language="js">
                             /* alternate my class name */
                             function toggleClass(e) {
-                                e.currentTarget.classList.toggle('my-animation');
+                            &emsp;&emsp;e.currentTarget.classList.toggle('my-animation');
                             }
                             let myButton = document.getElementById('btn');
                             byButton.addEventListener('click' , toggleClass);
