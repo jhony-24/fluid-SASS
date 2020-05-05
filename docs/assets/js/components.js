@@ -39,7 +39,7 @@ Vue.component('card', {
 
 Vue.component('simple-toast', {
     props: ["message"],
-    template: `<div class="message"><span class="text">{{message}}</span></div>`
+    template: `<div class="simple-toast"><span class="text">{{message}}</span></div>`
 });
 
 // main app components

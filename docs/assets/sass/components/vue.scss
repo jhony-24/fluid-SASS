@@ -136,3 +136,23 @@
         }
     }
 }
+
+// simple toast
+.simple-toast {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    .text {
+        display: inline-block;
+        margin: 1cm 0;
+        padding: 10px;
+        border-radius: 20px;
+        font-size: .9em;
+        background: lighten(black, 30);
+        color: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    }
+}
