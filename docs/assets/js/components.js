@@ -37,6 +37,11 @@ Vue.component('card', {
     template: `<div class="card"><strong>{{title}}</strong><slot></slot></div>`
 });
 
+Vue.component('simple-toast', {
+    props: ["message"],
+    template: `<div class="message"><span class="text">{{message}}</span></div>`
+});
+
 // main app components
 const SquareMotion = {
     props: {
