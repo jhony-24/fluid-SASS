@@ -1,36 +1,54 @@
 /*landing page*/
 .landing-section {
-    margin-top: $height-header;
+  margin-top: $height-header;
 }
 
 .landing-detail {
-    margin: 1.5in auto 1.5in;
+  margin: 1.5in auto 1.5in;
 }
 
-.title-ldg,.landing-message {
-    user-select: none;
+.title-ldg,
+.landing-message {
+  user-select: none;
 }
-.title-ldg{
-    font-weight: bold;
-    font-size: 5em;
-    text-shadow: 0 20px 20px rgba(0,0,0,.1);
-    @include max-width($width-mobile1) {
+.title-ldg {
+  font-weight: bold;
+  font-size: 5em;
+  text-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  @include max-width($width-mobile1) {
+    font-size: 3em;
+  }
+  .tp {
+    font-size: 2em;
+  }
+  .ts {
+    color: $secondary-color;
+    font-weight: normal;
+  }
+}
+
+.landing-message {
+  margin: 20px auto;
+  width: 35%;
+  .total-animations {
+    text-align: center;
+    margin: 1em auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    width: 30%;
+    .number-total {
+        font-weight: normal;
+        margin-right: 5px;
         font-size: 3em;
     }
-    .tp {
-        font-size: 2em;
+    .text {
+        font-weight: bold;
     }
-    .ts {
-        color: $secondary-color;
-        font-weight: normal;
-    }
-}
-
-.landing-message{
-    margin: 20px auto;
-    width: 35%;
-    @include max-width($width-mobile1) {
-        width: 80%;
-        font-size: 13px;
-    }
+  }
+  @include max-width($width-mobile1) {
+    width: 80%;
+    font-size: 13px;
+  }
 }
