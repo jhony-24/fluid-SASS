@@ -34,8 +34,8 @@
     }
 }
 
-.text-preview-animation {
-    text-shadow: 0 20px 30px rgba(0,0,0,.2);
-    color: $primary-color;
-    font-size: 1.2em;
+.square-main {
+    $size : 100px !important;
+    width: $size;
+    height: $size;
 }
