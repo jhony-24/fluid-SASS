@@ -68,6 +68,7 @@ window.addEventListener('load', function () {
         currentAnimation: '',
         links,
         selectedLink: window.location.hash,
+        totalAnimations : typesAnimation.length
     }
 
     new Vue({
