@@ -50,3 +50,15 @@
         }
     }
 }
+
+@mixin keyframes-fade-rotate {
+    @include animation((name: fade-rotate , duration : .5s)) {
+        from , 90%{
+            opacity: 0;
+        }
+        20%{
+            opacity: .3;
+        }
+        @include frame(10%,(rotate:360deg));
+    }
+}

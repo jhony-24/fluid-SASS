@@ -11,6 +11,7 @@
     &-intermittent { @include keyframes-fade-intermittent(); }
     &-left { @include keyframes-fade-left(); }
     &-right { @include keyframes-fade-right(); }
+    &-rotate { @include keyframes-fade-rotate(); }
 }
 
 // fade classes
