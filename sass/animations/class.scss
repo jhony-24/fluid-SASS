@@ -29,3 +29,8 @@
     &-vertical { @include keyframes-shake-vertical(); }
     &-cross { @include keyframes-shake-cross(); }
 }
+
+.d3 {
+    &-rotate{ @include keyframes-d3-rotate(); }
+    &-triangle{ @include keyframes-d3-triangle(); }
+}
