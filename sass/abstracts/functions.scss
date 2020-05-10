@@ -1,3 +1,6 @@
+/*
+Get the current prop of map if exists.
+*/
 @function getProp($map, $prop) {
   @if (map-has-key($map, $prop)) {
     @return map-get($map, $prop);
@@ -5,6 +8,14 @@
   @return "";
 }
 
+/*
+Define transformations for the 'transform' property using a key and value map.
+Example:
+input: 
+  $trasforms = ( translateX : 100px , rotate : 90deg )
+output:
+  translateX(100px)rotate(90deg)
+*/
 @function defineTransforms($transforms) {
   $all: "";
   @each $key, $value in $transforms {
