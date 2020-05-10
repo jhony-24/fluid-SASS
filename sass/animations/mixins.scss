@@ -20,3 +20,7 @@
 @mixin fluid-shake-rotate { @include keyframes-shake(); }
 @mixin fluid-shake-vertical { @include keyframes-shake(); }
 @mixin fluid-shake-cross { @include keyframes-shake(); }
+
+// 3d animations
+@mixin fluid-d3-rotate { @include keyframes-d3-rotate(); }
+@mixin fluid-d3-triangle { @include keyframes-d3-triangle(); }
