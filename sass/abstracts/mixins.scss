@@ -7,7 +7,11 @@
     $map: $props,
     $key: duration
   );
-  animation: $name $duration 1 ease-in-out;
+  $iteration : map-get(
+    $map: $props, 
+    $key: iteration
+  );
+  animation: $name $duration $iteration ease-in-out;
   @keyframes #{$name} {
     @content;
   }
