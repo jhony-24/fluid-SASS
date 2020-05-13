@@ -61,12 +61,27 @@
                     detail="Here are all the class names to create css animations.">
                 </paragraph-detail>
                 <div slot="body">
-                    <div class="all-mixins">
+
+                    <div class="container-mixins">
+                        <div class="container-mixins-nav row">
+                            <div class="all-category-mixins">
+                                    a
+                            </div>
+                            <div class="all-mixins">
+                                    b
+                            </div>
+                        </div>
+                        <div class="preview-change-animation row">
+                                    c
+                        </div>
+                    </div>
+                    <!-- <div class="all-mixins">
                         <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
                     </div>
                     <div class="preview-change-animation">
                         <square-motion class="square-main" :name-animation="currentAnimation"></square-motion>
-                    </div>
+                    </div> -->
+               
                 </div>
             </detail-section>
             <detail-section>
