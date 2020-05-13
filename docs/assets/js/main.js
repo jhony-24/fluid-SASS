@@ -39,6 +39,9 @@ window.addEventListener('load', function () {
                 this.currentAnimation = '';
             });
         },
+        selectAnimationCategory: function (nameCategory) {
+            this.currentCategory = nameCategory;
+        },
         onLinkSelected: function (to) {
             this.selectedLink = to;
             let getOnlyId = this.selectedLink.replace('#', '');
@@ -60,11 +63,7 @@ window.addEventListener('load', function () {
     // get states when is pressed some elements
     var computedAnimations = {
         allAnimations: function () {
-            return this.typesAnimation;
-        },
-        textAnimationSelected: function () {
-            let current = this.currentAnimation;
-            return (current !== '') ? ('! ' + current) : '';
+            return this.typesAnimation[this.currentCategory];
         },
         classSelected: function () {
             let current = this.currentAnimation;
@@ -76,7 +75,7 @@ window.addEventListener('load', function () {
         },
         totalAnimations: function () {
             let secondValKey = 1;
-            let lengthTypeAnimations = Object.entries(typesAnimation).map(function (current) {
+            let lengthTypeAnimations = Object.entries(this.typesAnimation).map(function (current) {
                 return current[secondValKey].length;
             });
             let totalUnionLength = lengthTypeAnimations.reduce(function (accumulator, current) {
@@ -84,9 +83,9 @@ window.addEventListener('load', function () {
             });
             return totalUnionLength;
         },
-        getAnimationCategoryNames : function() {
+        getAnimationCategoryNames: function () {
             let names = [];
-            for( let current in typesAnimation) {
+            for (let current in typesAnimation) {
                 names.push(current);
             }
             return names;
@@ -108,6 +107,7 @@ window.addEventListener('load', function () {
         links,
         examples,
         currentAnimation: '',
+        currentCategory: 'bounce',
         selectedLink: window.location.hash,
         isDownload: false,
         isCopy: false,
