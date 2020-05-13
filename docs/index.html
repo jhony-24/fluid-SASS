@@ -65,23 +65,17 @@
                     <div class="container-mixins">
                         <div class="container-mixins-nav row">
                             <div class="all-category-mixins">
-                                    a
+                                <button v-for="i in 4" class="category-mixin">3d animation</button>    
                             </div>
                             <div class="all-mixins">
-                                    b
+                                <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
                             </div>
                         </div>
                         <div class="preview-change-animation row">
-                                    c
+                            <square-motion class="square-main" :name-animation="currentAnimation"></square-motion>
                         </div>
                     </div>
-                    <!-- <div class="all-mixins">
-                        <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>
-                    </div>
-                    <div class="preview-change-animation">
-                        <square-motion class="square-main" :name-animation="currentAnimation"></square-motion>
-                    </div> -->
-               
+
                 </div>
             </detail-section>
             <detail-section>
