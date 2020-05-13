@@ -19,10 +19,11 @@
 .container-mixins {
   display: flex;
   width: 80%;
-  margin-bottom: -3em;
+  margin:2em 0;
   @include max-width($width-mobile1) {
     display: block;
     width: 100%;
+    margin:0 0 -3em;
   }
   .row {
     display: flex;

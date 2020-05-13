@@ -1,10 +1,11 @@
-var typesAnimation = [
-    "bounce", "bounce-inset", "bounce-rotate",
-    "fade", "fade-intermittent", "fade-left", "fade-right", "fade-rotate",
-    "from-left", "from-right", "from-top", "from-bottom",
-    "shake", "shake-rotate", "shake-vertical", "shake-cross",
-    "d3-rotate", "d3-triangle",
-];
+var typesAnimation = {
+    bounce: ["bounce", "bounce-inset", "bounce-rotate",],
+    fade: ["fade", "fade-intermittent", "fade-left", "fade-right", "fade-rotate",],
+    from: ["from-left", "from-right", "from-top", "from-bottom",],
+    shake: ["shake", "shake-rotate", "shake-vertical", "shake-cross",],
+    d3: ["d3-rotate", "d3-triangle",],
+}
+
 
 var links = [
     { to: "#home", text: "home" },
