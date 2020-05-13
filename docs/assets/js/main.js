@@ -73,15 +73,25 @@ window.addEventListener('load', function () {
                     'type-animation-selected': (current === text)
                 };
             }
+        },
+        totalAnimations: function () {
+            let secondValKey = 1;
+            let lengthTypeAnimations = Object.entries(typesAnimation).map(function (current) {
+                return current[secondValKey].length;
+            });
+            let totalUnionLength = lengthTypeAnimations.reduce(function (accumulator, current) {
+                return accumulator + current;
+            });
+            return totalUnionLength;
         }
     }
 
     var methodsExample = {
         copied: function () {
             this.isCopy = true;
-            setTimeout(function() {
+            setTimeout(function () {
                 this.isCopy = false;
-            }.bind(this),2000);
+            }.bind(this), 2000);
         }
     }
 
@@ -92,7 +102,6 @@ window.addEventListener('load', function () {
         examples,
         currentAnimation: '',
         selectedLink: window.location.hash,
-        totalAnimations: typesAnimation.length,
         isDownload: false,
         isCopy: false,
     }
