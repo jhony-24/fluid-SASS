@@ -65,7 +65,7 @@
                     <div class="container-mixins">
                         <div class="container-mixins-nav row">
                             <div class="all-category-mixins">
-                                <button v-for="i in 4" class="category-mixin">3d animation</button>    
+                                <button v-for="i in getAnimationCategoryNames" class="category-mixin">{{i}}</button>    
                             </div>
                             <div class="all-mixins">
                                 <type-animation v-for="i in allAnimations" :class="classSelected(i)" :text="i" @onclick="selectAnimation"></type-animation>

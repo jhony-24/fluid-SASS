@@ -83,6 +83,13 @@ window.addEventListener('load', function () {
                 return accumulator + current;
             });
             return totalUnionLength;
+        },
+        getAnimationCategoryNames : function() {
+            let names = [];
+            for( let current in typesAnimation) {
+                names.push(current);
+            }
+            return names;
         }
     }
 
