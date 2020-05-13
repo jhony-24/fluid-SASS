@@ -20,11 +20,14 @@
   display: flex;
   width: 80%;
   margin: 2em 0 4em;
+  @include max-width($width-mobile1) {
+    display: block;
+    width: 100%;
+  }
   .row {
     display: flex;
     &.container-mixins-nav {
       flex-direction: column;
-      width: 100%;
     }
     &.preview-change-animation {
       align-items: center;
@@ -34,6 +37,12 @@
   }
 
   .all-category-mixins {
+    @include max-width($width-mobile1) {
+      overflow-x: scroll;
+      width: 100%;
+      display: block;
+      white-space: nowrap;
+    }
     .category-mixin {
       font-weight: bold;
       margin: 2em 3em 2em 0;
@@ -43,24 +52,29 @@
   .all-mixins {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2em;
+    gap: 2em;
     height: 200px;
     overflow-y: auto;
+    @include max-width($width-mobile1) {
+      grid-template-columns: repeat(2,1fr);
+      gap: 1em;
+      height: 150px;
+    }
     @include min-width($width-mobile1) {
-        padding-right: 2em;
-        &::-webkit-scrollbar {
-            display: block;
-            background: $silver;
-            width: 6px;
-            height: 8px;
+      padding-right: 2em;
+      &::-webkit-scrollbar {
+        display: block;
+        background: $silver;
+        width: 6px;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background: $text-smooth;
+        &:vertical:hover {
+          background: lighten($text-smooth, 30);
         }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 6px;
-            background: $text-smooth;
-            &:vertical:hover {
-                background:lighten($text-smooth, 30);
-            }
-        }
+      }
     }
   }
   .square-main {
