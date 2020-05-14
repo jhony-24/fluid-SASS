@@ -52,12 +52,12 @@
       margin: 2em 3em 2em 0;
       padding: 10px;
       border-radius: 10px;
-      background: rgba(0, 0, 0, 0.02);
       transition: background 0.3s;
-      border: 2px solid transparent;
+      border: 1px solid $secondary-color;
+      color: $secondary-color;
       &:hover {
-        border-color: $secondary-color;
-        color: $secondary-color;
+        background: $primary-color;
+        color: white;
       }
     }
   }
