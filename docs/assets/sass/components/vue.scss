@@ -55,6 +55,7 @@
         color: $text-smooth;
         width: 80%;
         padding-left: 1.5em;
+        line-height: 20px;
         @include max-width($width-mobile1) {
             font-size: 13px;
             width: 100%;
