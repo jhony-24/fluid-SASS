@@ -10,7 +10,7 @@ var typesAnimation = {
 var links = [
     { to: "#home", text: "home" },
     { to: "#mixins", text: "mixins and class" },
-    { to: "#examples", text: "examples", },
+    { to: "#integration", text: "integration", },
     { to: "#downloads", text: "downloads" },
 ];
 

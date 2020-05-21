@@ -119,7 +119,10 @@ window.addEventListener('load', function () {
         data: initialState,
         components: { ...components },
         computed: { ...computedAnimations },
-        methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample }
+        methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample },
+        created() {
+            this.onLinkSelected('#home');
+        }  
     });
 
 });
