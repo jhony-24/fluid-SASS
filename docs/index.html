@@ -26,7 +26,7 @@
     <div class="loading" id="loading-page"></div>
     <div id="app">
         <div class="header">
-            <div class="links from-top">
+            <div class="links">
                 <strong-link 
                 v-for="i in links" 
                 :to="i.to" 
@@ -34,7 +34,7 @@
                 :selected-color="selectedLink === i.to ? '#5C24FC' : 'black'" 
                 @onclick="onLinkSelected(i.to)"></strong-link>
             </div>
-            <div class="circle shake-rotate"><div class="text-circle">!GO</div></div>
+            <div class="circle"><div class="text-circle">!GO</div></div>
         </div>
         <div class="landing section" id="home">
             <div class="landing-detail">
