@@ -20,3 +20,14 @@
     }    
 }
 
+@mixin keyframes-bounce-expand($pos) {
+    @include animation((name : bounce-expand-#{$pos} , duration : .3s)) {
+            @if $pos == "x" {
+                @include frame(from,(scale:(3,1.3)));
+            }
+            @else if $pos == "y" {
+                @include frame(from,(scale:(1.3,3)));
+            }
+    }    
+}
+

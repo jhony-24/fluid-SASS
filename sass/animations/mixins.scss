@@ -2,6 +2,8 @@
 @mixin fluid-bounce { @include keyframes-bounce(); }
 @mixin fluid-bounce-inset { @include keyframes-bounce-inset(); }
 @mixin fluid-bounce-rotate { @include keyframes-bounce-rotate(); }
+@mixin fluid-bounce-expand-x { @include keyframes-bounce-expand("x"); }
+@mixin fluid-bounce-expand-y { @include keyframes-bounce-expand("y"); }
 
 // fade animations
 @mixin fluid-fade { @include keyframes-fade(); }

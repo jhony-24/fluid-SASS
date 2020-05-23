@@ -3,6 +3,8 @@
     @include keyframes-bounce();
     &-inset {  @include keyframes-bounce-inset(); }
     &-rotate { @include keyframes-bounce-rotate(); }
+    &-expand-x { @include keyframes-bounce-expand("x"); }
+    &-expand-y { @include keyframes-bounce-expand("y"); }
 }
 
 // fade classes
