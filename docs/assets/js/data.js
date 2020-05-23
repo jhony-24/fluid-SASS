@@ -1,5 +1,5 @@
 var typesAnimation = {
-    bounce: ["bounce", "bounce-inset", "bounce-rotate",],
+    bounce: ["bounce", "bounce-inset", "bounce-rotate","bounce-expand-x","bounce-expand-y"],
     fade: ["fade", "fade-intermittent", "fade-left", "fade-right", "fade-rotate",],
     from: ["from-left", "from-right", "from-top", "from-bottom",],
     shake: ["shake", "shake-rotate", "shake-vertical", "shake-cross",],
