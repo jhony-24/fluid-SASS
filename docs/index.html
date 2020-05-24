@@ -89,6 +89,22 @@
                     detail="See a sample of how to integrate development code in HTML, SCSS and for more dynamism in Javascript.">
                 </paragraph-detail>
                 <div slot="body">
+                    <div class="example-parameters">
+                       <ul class="parameters">
+                        <li class="parameter-detail">
+                            <strong>name </strong>
+                            <span>Animation name, by default it has the name of the mixin.</span>
+                        </li>
+                        <li class="parameter-detail">
+                            <strong>duration </strong>
+                            <span>Duration of the animation to run.</span>
+                        </li>
+                        <li class="parameter-detail">
+                            <strong>iteration </strong>
+                            <span>How many times will the default animation be repeated is 1.</span>
+                        </li>
+                      </ul>
+                    </div>
                     <div class="examples-languages">
                         <template-code v-for="i in examples" :language="i.language" @copy-click="copied">
                             {{i.code}}
