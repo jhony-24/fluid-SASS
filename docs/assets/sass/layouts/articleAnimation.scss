@@ -60,6 +60,9 @@
         color: white;
       }
     }
+    .type-animation-selected-category {
+      @include bfg($primary-color, white);
+    }
   }
   .all-mixins {
     display: grid;

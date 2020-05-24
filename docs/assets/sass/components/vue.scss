@@ -35,7 +35,6 @@
 .type-animation-selected {
     @include bfg($primary-color,white);
 }
-
 // paragraph
 .paragraph {
     @include flex(column,none,none);

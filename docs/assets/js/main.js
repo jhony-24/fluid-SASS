@@ -73,6 +73,14 @@ window.addEventListener('load', function () {
                 };
             }
         },
+        categorySelected: function () {
+            let current = this.currentCategory;
+            return function (text) {
+                return {
+                    'type-animation-selected-category': (current === text)
+                }
+            }
+        },
         totalAnimations: function () {
             let secondValKey = 1;
             let lengthTypeAnimations = Object.entries(this.typesAnimation).map(function (current) {
@@ -122,7 +130,7 @@ window.addEventListener('load', function () {
         methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample },
         created() {
             this.onLinkSelected('#home');
-        }  
+        }
     });
 
 });
