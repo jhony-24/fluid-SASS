@@ -44,18 +44,32 @@ window.addEventListener('load', function () {
         },
         onLinkSelected: function (to) {
             this.selectedLink = to;
+            const BEFORE_POSITION = 'BEFORE_POSITION';
             let getOnlyId = this.selectedLink.replace('#', '');
             let offsetTop = document.getElementById(getOnlyId).offsetTop;
-            let i = 0;
+            let i = parseInt(sessionStorage.getItem(BEFORE_POSITION)) || 0;
             let minHeight = 144;
             let duration = 1;
-            let interval = setInterval(function () {
-                if (i >= offsetTop) {
-                    clearInterval(interval);
-                }
-                i += 10;
-                window.scrollTo(0, i - minHeight);
-            }, duration);
+            if (offsetTop < i) {
+                let interval = setInterval(function () {
+                    if (i <= offsetTop) {
+                        clearInterval(interval);
+                        sessionStorage.setItem(BEFORE_POSITION, parseInt(offsetTop));
+                    }
+                    i -= 10;
+                    window.scrollTo(0, i - minHeight);
+                }, duration);
+            }
+            else {
+                let interval = setInterval(function () {
+                    if (i >= offsetTop) {
+                        clearInterval(interval);
+                        sessionStorage.setItem(BEFORE_POSITION, parseInt(i));
+                    }
+                    i += 10;
+                    window.scrollTo(0, i - minHeight);
+                }, duration);
+            }
             document.title = "Fluid-sass | " + getOnlyId;
         },
     }
