@@ -97,5 +97,7 @@
     $size: 100px !important;
     width: $size;
     height: $size;
+    box-shadow: 10px -10px 30px inset rgba(0,0,0,.5);
+    border-radius: 100%;
   }
 }
