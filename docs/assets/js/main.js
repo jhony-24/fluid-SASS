@@ -36,7 +36,9 @@ window.addEventListener('load', function () {
             this.currentAnimation = text;
             document.querySelector('.square-main').addEventListener('webkitAnimationEnd', (event) => {
                 event.target.classList.remove(this.currentAnimation);
-                this.currentAnimation = '';
+                setTimeout(() => {
+                    this.currentAnimation = '';
+                },event.elapsedTime);
             });
         },
         selectAnimationCategory: function (nameCategory) {
