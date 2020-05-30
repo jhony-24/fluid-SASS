@@ -15,7 +15,6 @@
     &-right { @include keyframes-fade-right(); }
     &-rotate { @include keyframes-fade-rotate(); }
 }
-
 // fade classes
 .from {
     &-left { @include keyframes-from-left(); }
@@ -30,6 +29,8 @@
     &-rotate { @include keyframes-shake-rotate(); }
     &-vertical { @include keyframes-shake-vertical(); }
     &-cross { @include keyframes-shake-cross(); }
+    &-skew-x { @include keyframes-shake-skew("x"); }
+    &-skew-y { @include keyframes-shake-skew("y"); }
 }
 
 // d3 classes

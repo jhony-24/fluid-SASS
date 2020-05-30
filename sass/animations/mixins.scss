@@ -22,6 +22,8 @@
 @mixin fluid-shake-rotate { @include keyframes-shake(); }
 @mixin fluid-shake-vertical { @include keyframes-shake(); }
 @mixin fluid-shake-cross { @include keyframes-shake(); }
+@mixin fluid-shake-skew-x { @include keyframes-shake-skew("x"); }
+@mixin fluid-shake-skew-y { @include keyframes-shake-skew("y"); }
 
 // 3d animations
 @mixin fluid-d3-rotate { @include keyframes-d3-rotate(); }
