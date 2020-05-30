@@ -15,6 +15,24 @@
   font-weight: bold;
   font-size: 5em;
   text-shadow: 0 20px 20px rgba(0, 0, 0, 0.1);
+  animation-name: typewriter;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: steps(10);
+  overflow: hidden;
+  margin: auto;
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to{
+      width: 100%;
+    }
+  }  
+
+  @include min-width($width-mobile1) {
+    white-space: nowrap;
+  }
   @include max-width($width-mobile1) {
     font-size: 3em;
   }
