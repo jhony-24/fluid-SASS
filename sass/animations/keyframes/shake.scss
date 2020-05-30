@@ -27,3 +27,22 @@
         @include frame( (30%,100%), ( translateX : -10px )); 
     }
 }
+
+
+@mixin keyframes-shake-skew($direction) {
+    @include animation((name : shake-skew-#{$direction} , duration : .4s)) {
+        $mapA : ();
+        $mapB : ();
+        $skew : 50deg;
+        @if $direction == "x" {
+            $mapA : ( skewX : $skew );
+            $mapB : ( skewX : $skew * -1 );
+        }
+        @else if $direction == "y" {
+            $mapA : ( skewY : $skew );
+            $mapB : ( skewY : $skew * -1 );
+        }
+        @include frame( (0%,50%), $mapA); 
+        @include frame( (10%,60%), $mapB); 
+    }
+}

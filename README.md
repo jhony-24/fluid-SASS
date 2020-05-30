@@ -2,7 +2,7 @@
     <img src="docs/assets/images/fluid.png" />
 </p>
 
-## What is Svelte?
+## What is Fluid-Sass?
 
 Fluid sass in a scss library to create fluid animations based on movement, just include the mixin in your class and edit it as you like to create fast and beautiful animations.
 There are currently **20** animations available.
