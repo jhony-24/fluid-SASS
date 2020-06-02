@@ -23,13 +23,16 @@
     &-bottom { @include keyframes-from-bottom(); }
 }
 
+
+$f : shake-skew;
+
 // shake classes    
 .shake { 
     @include keyframes-shake(); 
     &-rotate { @include keyframes-shake-rotate(); }
     &-vertical { @include keyframes-shake-vertical(); }
     &-cross { @include keyframes-shake-cross(); }
-    &-skew-x { @include keyframes-shake-skew("x"); }
+    &-skew-x { @include keyframes-#{$f}("x"); }
     &-skew-y { @include keyframes-shake-skew("y"); }
 }
 
