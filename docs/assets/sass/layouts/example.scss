@@ -5,6 +5,9 @@
   }
   .parameter-detail {
     margin: 20px 0;
+    @include max-width($width-mobile1) {
+      font-size: 14px;
+    }
     span {
       color: $text-smooth;
     }
