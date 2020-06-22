@@ -7,12 +7,15 @@
         from {
             opacity:  0;
         }
+        30%{
+            opacity: .6;
+        }
     }
 }
 
 @mixin keyframes-fade-intermittent {
-    $maxFrames : 20;
-    @include animation(( name : fade-intermittent , duration : 2.5s )){
+    $maxFrames : 100;
+    @include animation(( name : fade-intermittent , duration : 2s )){
         @for $i from 1 through $maxFrames {
             @if $i % 2 == 0 {
                 #{$i}%{
@@ -20,7 +23,7 @@
                 }
             } @else {
                 #{$i}%{
-                    opacity: .9;
+                    opacity: 0.5;
                 }                
             }
         }
@@ -30,11 +33,15 @@
 @mixin keyframes-fade-left {
     @include animation(( name : fade-left , duration : .3s )) {
         from {
-            @include fade((translateX : -100%));
+            @include fade((translateX : -90px,scaleX:.8));
+            opacity: .5;
+        }
+        40% {
+            @include fade((translateX : -30px,scaleX:.4));
             opacity: 0;
         }
         50% {
-            opacity: 0;
+            @include fade((translateX : -10px,scaleX:1.8));
         }
     }
 }
@@ -42,23 +49,29 @@
 @mixin keyframes-fade-right {
     @include animation(( name : fade-right , duration : .3s )) {
         from {
-            @include fade((translateX : 100%));
+            @include fade((translateX : 90px,scaleX:.8));
+            opacity: .5;
+        }
+        40% {
+            @include fade((translateX : 30px,scaleX:.4));
             opacity: 0;
         }
         50% {
-            opacity: 0;
+            @include fade((translateX : 10px,scaleX:1.8));
         }
     }
 }
 
 @mixin keyframes-fade-rotate {
-    @include animation((name: fade-rotate , duration : .5s)) {
+    @include animation((name: fade-rotate , duration : 2s)) {
         from , 90%{
             opacity: 0;
         }
         20%{
             opacity: .3;
         }
-        @include frame(10%,(rotate:360deg));
+        @include frame(10%,(rotate:360deg,scale:1.1));
+        @include frame(60%,(rotate:0deg,scale:1.9));
+        @include frame(80%,(rotate:360deg,scale:.9));
     }
 }
