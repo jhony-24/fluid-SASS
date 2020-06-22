@@ -14,7 +14,7 @@
 }
 
 @mixin keyframes-fade-intermittent {
-    $maxFrames : 100;
+    $maxFrames : 20;
     @include animation(( name : fade-intermittent , duration : 2s )){
         @for $i from 1 through $maxFrames {
             @if $i % 2 == 0 {
@@ -22,8 +22,8 @@
                     opacity: 0;
                 }
             } @else {
-                #{$i}%{
-                    opacity: 0.5;
+                #{100 / $i}%{
+                    opacity: 1;
                 }                
             }
         }
