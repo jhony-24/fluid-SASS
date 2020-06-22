@@ -1,27 +1,37 @@
 @mixin  keyframes-from-left {
     @include animation(( name : from-left , duration : .3s )){
-        @include frame(10%,(translateX:-100%));
-        @include frame(60%,(translateX:20px));
+        @include frame(10%,(translateX:-200%));
+        @include frame(30%,(translateX:10px));
+        @include frame(50%,(translateX:20px));
+        @include frame(95%,(translateX:-10px));
+        @include frame(98%,(translateX:-2px));
     }    
 }
 
 @mixin keyframes-from-right {
     @include animation(( name : from-right , duration : .3s )){
-        @include frame(10%,( translateX : 100% )); 
-        @include frame(60%,( translateX : -20px )); 
+        @include frame(10%,(translateX:200%));
+        @include frame(30%,(translateX:-10px));
+        @include frame(50%,(translateX:-20px));
+        @include frame(95%,(translateX:10px));
+        @include frame(98%,(translateX:2px));
     }
 }
 
 @mixin keyframes-from-top {
     @include animation(( name : from-top , duration : .3s )){
         @include frame(10%,( translateY : -100% )); 
-        @include frame(60%,( translateY : 20px )); 
+        @include frame(30%,( translateY : 20px )); 
+        @include frame(50%,( translateY : -5px, scale : .8 )); 
+        @include frame(90%,( translateY : 10px, scale : 1.1 )); 
     }
 }
 
 @mixin keyframes-from-bottom {
     @include animation(( name : from-bottom , duration : .3s )){
         @include frame(10%,( translateY : 100% )); 
-        @include frame(60%,( translateY : -20px )); 
+        @include frame(30%,( translateY : -20px )); 
+        @include frame(50%,( translateY : 5px, scale : .8 )); 
+        @include frame(90%,( translateY : -10px, scale : 1.1 )); 
     }
 }
