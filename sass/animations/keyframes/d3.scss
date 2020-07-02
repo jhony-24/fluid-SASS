@@ -1,12 +1,15 @@
 @mixin keyframes-d3-rotate {
-    @include animation(( name : d3-rotate , duration : .3s )){
-        @include frame(100%,( perspective:400px, rotate3d:(1,1,1,720deg) ));
+    @include animation(( name : d3-rotate , duration : .5s )){
+        @include frame(70%,( perspective:600px, scale : .9 ,rotate3d:(0,1,1,350deg) ));
+        @include frame(80%,( perspective:400px, scale : 1.5 ,rotate3d:(1,0,1,-120deg) ));
+        @include frame(90%,( perspective:500px, scale : 1.2 ,rotate3d:(1,1,0,-190deg) ));
     }
 }
 
 @mixin keyframes-d3-triangle {
     @include animation(( name : d3-triangle , duration : .3s )){
-        @include frame(0%,( perspective:400px, translate3d:(0,0,100%) ));
+        @include frame(10%,( perspective:400px,  translate3d:(-100%,0,0) ));
+        @include frame(20%,( perspective:400px,  translate3d:(0,0,100%) ));
         @include frame(50%,( perspective:400px, translate3d:(100%,0,0) ));
         @include frame(90%,( perspective:400px, translate3d:(0,100%,0) ));
     }    
