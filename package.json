@@ -1,5 +1,5 @@
 {
-  "name": "animate.fluid-sass",
+  "name": "fluid-sass",
   "version": "1.0.0",
   "description": "Fluid sass in a scss library to create fluid animations based on movement, just include the mixin in your class and edit it as you like to create fast and beautiful animations",
   "main": "gulpfile.js",
