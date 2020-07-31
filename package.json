@@ -1,9 +1,13 @@
 {
   "name": "fluid-sass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fluid sass in a scss library to create fluid animations based on movement, just include the mixin in your class and edit it as you like to create fast and beautiful animations",
   "homepage": "https://jhony-24.github.io/fluid-sass/",
-  "keywords": [ "sass", "css" , "animation" ],
+  "keywords": [
+    "sass",
+    "css",
+    "animation"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/jhony-24/fluid-sass"
@@ -11,6 +15,9 @@
   "author": {
     "email": "jhonyvegacuya24@gmail.com",
     "name": "Jhony Vega"
+  },
+  "bin": {
+    "fluid-sass": "index.js"
   },
   "main": "gulpfile.js",
   "scripts": {
@@ -23,5 +30,11 @@
     "gulp-cli": "^2.2.0",
     "gulp-sass": "^4.0.2",
     "gulp-sass-bulk-import": "^1.0.1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cli-spinners": "^2.4.0",
+    "commander": "^6.0.0",
+    "ora": "^4.0.5"
   }
 }

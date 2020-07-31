@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="fluid.png" />
+    <img src="./fluid.png" />
 </p>
 
 ## What is Fluid-Sass?
