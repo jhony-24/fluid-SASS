@@ -104,7 +104,7 @@
     @include max-width($width-mobile1) {
         overflow-x: scroll;
         .format-code {
-            font-size: .9em;
+            font-size: .8em;
         }
     }
     > * {
@@ -133,7 +133,6 @@
     .preview-code {
         .format-code {
             white-space: pre-line;
-            color: $primary-color;
         }
     }
 }

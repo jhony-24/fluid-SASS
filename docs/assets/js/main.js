@@ -116,6 +116,29 @@ window.addEventListener('load', function () {
         }
     }
 
+    var computedGetDataToTable = {
+        allClassnamesAnimation: function() {
+            let animations = this.typesAnimation;
+            let allAnimations = [];
+            for(let typeAnimation in animations) {
+                for(let animation of animations[typeAnimation]) {
+                    allAnimations.push({
+                        typeAnimation,
+                        animation
+                    })
+                }
+            }
+            return allAnimations;
+        },
+        fieldsClassnamesTable : function() {
+            return [
+                "Index",
+                "Classname or mixin animation",
+                "Type of animation"
+            ]
+        }
+    }
+
     var methodsExample = {
         copied: function () {
             this.isCopy = true;
@@ -142,7 +165,7 @@ window.addEventListener('load', function () {
         el: '#app',
         data: initialState,
         components: { ...components },
-        computed: { ...computedAnimations },
+        computed: { ...computedAnimations,...computedGetDataToTable },
         methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample },
         created() {
             this.onLinkSelected('#home');

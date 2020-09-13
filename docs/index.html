@@ -71,8 +71,7 @@
                     title="MIXINS WITH CLASS NAMES:"
                     detail="Here are all the class names where you can test the animations (in mixins you need to add the prefix 'fluid').">
                 </paragraph-detail>
-                <div slot="body">
-
+                <template slot="body">
                     <div class="container-mixins">
                         <div class="container-mixins-nav row">
                             <div class="all-category-mixins">
@@ -90,9 +89,9 @@
                             <square-motion class="square-main" :name-animation="currentAnimation"></square-motion>
                         </div>
                     </div>
-
-                </div>
+                </template>
             </detail-section>
+
             <detail-section>
                 <paragraph-detail
                     slot="header"
@@ -100,31 +99,16 @@
                     title="HOW TO INTEGRATE:"
                     detail="See a sample of how to integrate development code in HTML, SCSS and for more dynamism in Javascript.">
                 </paragraph-detail>
-                <div slot="body">
-                    <div class="example-parameters">
-                       <ul class="parameters">
-                        <li class="parameter-detail">
-                            <strong>$name </strong>
-                            <span>Animation name, by default it has the name of the mixin.</span>
-                        </li>
-                        <li class="parameter-detail">
-                            <strong>$duration </strong>
-                            <span>Duration of the animation to run.</span>
-                        </li>
-                        <li class="parameter-detail">
-                            <strong>$iteration </strong>
-                            <span>How many times will the default animation be repeated is 1.</span>
-                        </li>
-                      </ul>
-                    </div>
+                <template slot="body">
                     <div class="examples-languages">
                         <template-code v-for="i in examples" :language="i.language" @copy-click="copied">
                             {{i.code}}
                         </template-code>
                         <simple-toast v-if="isCopy" message="codigo copiado"></simple-toast>
                     </div>
-                </div>
+                </template>
             </detail-section>
+
             <detail-section>
                 <paragraph-detail 
                     slot="header" 
@@ -132,7 +116,7 @@
                     title="DOWNLOAD FILES:"
                     detail="Download the 'CSS' or 'SASS' files that best suit your required project..">
                 </paragraph-detail>
-                <div slot="body">
+                <template slot="body">
                     <div class="card-install">
                         <p class="command-install">npm install --save fluid-sass</p>
                         <p class="command-install">yarn add fluid-sass</p>
@@ -148,7 +132,35 @@
                         </div>
                     </div>    
                     <simple-toast v-if="isDownload" message="gracias por su descarga"></simple-toast>
-                </div>
+                </template>
+            </detail-section>
+            
+            <detail-section>
+                <paragraph-detail 
+                slot="header" 
+                id="list-classnames"
+                title="LIST OF CLASSNAMES:"
+                detail="The full list of classes and mixins with respective type animation">
+                </paragraph-detail>
+                <template slot="body">
+                    <div class="container-table">
+                        <table class="table-animations">
+                            <thead class="table-animations__header">
+                                <tr>
+                                    <th v-for="(item,index) in fieldsClassnamesTable" :key="index">{{item}}</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-animations__body">
+                                <tr v-for="({animation,typeAnimation},index) in allClassnamesAnimation" :key="index">
+                                    <td>{{index+1}}</td>
+                                    <td>{{animation}}</td>
+                                    <td>{{typeAnimation}}</td>
+                                </tr>
+                                <colgroup class="index"></colgroup>
+                            </tbody>
+                        </table>
+                    </div>
+                </template>
             </detail-section>
         </div>
        

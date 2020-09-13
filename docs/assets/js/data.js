@@ -18,31 +18,33 @@ var examples = [
     {
         language: "html",
         code: `
-        <!-- include class names -->
-        <button class="btn my-animation" id="btn">
-        primary 
-        </button>
-        <article class="card my-animation">
-        new article 
-        </article>
-        `
+        <!-- page.html -->
+        <header class="header-component">
+            <button class="fluid-shake-vertical">
+                Sign in
+            </button>
+            <button class="fluid-shake-vertical" id="btn>
+                Sign up
+            </button>
+        </header>`
     },
     {
-        language: "sass",
+        language: "sass / scss",
         code: `
-        // include in my class personalize 
-        // add the prefix "fluid-" in the mixin 
-        .my-animation {
-        @include fluid-bounce();
-        }       
-        `
+        // page.scss
+        .header-component {
+            @include fluid-bounce();
+        }
+        .button-component {
+            @include fluid-shake-vertical();
+        }`
     },
     {
         language: "javascript",
         code: `
         /* alternate my class name */
         function toggleClass(e) {
-        e.currentTarget.classList.toggle('my-animation');
+            e.currentTarget.classList.toggle('fluid-shake-vertical');
         }
         let myButton = document.getElementById('btn');
         byButton.addEventListener('click' , toggleClass);
