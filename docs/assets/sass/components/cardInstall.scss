@@ -1,17 +1,18 @@
 .card-install {
-    margin: 3em .6cm;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 1in;
-    @include max-width($width-mobile1) {
-        grid-template-columns: repeat(1,1fr);
-        gap: 20px;
-    }
-    .command-install {
-        background: rgba(0,0,0,.02);
-        padding: 20px;
-        border-radius: 10px;
-        border: 2px solid $primary-color;
-        font-size: 1rem;
-    }
+  margin: 3em 0.6cm;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1in;
+  @include max-width($width-mobile1) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .command-install {
+    background: rgba(0, 0, 0, 0.02);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--color-primary);
+    font-size: 1rem;
+    color: var(--color-text-normal);
+  }
 }

@@ -25,6 +25,7 @@ p {
 html,
 body {
   scroll-behavior: smooth;
+  background: var(--color-page);
 }
 
 ::-webkit-scrollbar {

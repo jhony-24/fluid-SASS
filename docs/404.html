@@ -19,6 +19,14 @@
         --color-text: rgba(0, 0, 0, 0.5);
         --color-page: #ffffff;
       }
+      @media (prefers-color-scheme:dark) {
+        :root {
+          --color-primary: #5c24fc;
+          --color-error: #ffffff;
+          --color-text: #ffffff;
+          --color-page: rgb(30,30,30);  
+        }
+      }
       html,
       body {
         height: 100%;

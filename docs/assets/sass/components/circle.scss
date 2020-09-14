@@ -1,28 +1,28 @@
 .circle {
-    $size : 600px;
-    width: $size;
-    height:$size;
-    background: $secondary-color;
-    border-radius: 100%;
-    position: fixed;
-    right:  $size / -2;
-    top:  $size / -2;
-    box-shadow: 0 10px 1000px $secondary-color;
-    @include max-width($width-mobile1) {
-        display: none;
+  $size: 600px;
+  width: $size;
+  height: $size;
+  background: var(--color-secondary);
+  border-radius: 100%;
+  position: fixed;
+  right: $size / -2;
+  top: $size / -2;
+  box-shadow: 0 10px 1000px var(--color-secondary);
+  @include max-width($width-mobile1) {
+    display: none;
+  }
+  > .text-circle {
+    color: white;
+    position: absolute;
+    bottom: 25%;
+    left: 25%;
+    font-size: 1.3em;
+    font-weight: bold;
+    animation: text-circle 0.3s 1;
+    @keyframes text-circle {
+      from {
+        opacity: 0;
+      }
     }
-    > .text-circle {
-        color: white;
-        position: absolute;
-        bottom: 25%;
-        left: 25%;
-        font-size: 1.3em;
-        font-weight: bold;
-        animation: text-circle .3s 1;
-        @keyframes text-circle {
-            from {
-                opacity: 0;
-            }
-        }
-    }
+  }
 }

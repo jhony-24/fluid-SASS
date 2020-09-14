@@ -25,10 +25,10 @@
     from {
       width: 0;
     }
-    to{
+    to {
       width: 100%;
     }
-  }  
+  }
 
   @include min-width($width-mobile1) {
     white-space: nowrap;
@@ -38,9 +38,10 @@
   }
   .tp {
     font-size: 2em;
+    color: var(--color-text-normal);
   }
   .ts {
-    color: $secondary-color;
+    color: var(--color-secondary);
     font-weight: normal;
   }
 }
@@ -56,13 +57,18 @@
     justify-content: center;
     font-size: 2em;
     width: 30%;
+    %theme-color-text {
+      color: var(--color-text-normal);
+    }
     .number-total {
-        font-weight: normal;
-        margin-right: 5px;
-        font-size: 3em;
+      font-weight: normal;
+      margin-right: 5px;
+      font-size: 3em;
+      @extend %theme-color-text;
     }
     .text {
-        font-weight: bold;
+      font-weight: bold;
+      @extend %theme-color-text;
     }
   }
   @include max-width($width-mobile1) {

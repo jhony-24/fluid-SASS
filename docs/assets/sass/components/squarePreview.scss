@@ -1,31 +1,31 @@
 .animate-square-landing {
-    animation: animate-square-preview-landing 10s infinite linear;
-    transform-style: preserve-3d;
-    @keyframes animate-square-preview-landing {
-        0% , 10% {
-            transform: rotate(360deg);
-        }
-        20% , 30% {
-            transform: rotate(360deg)translateX(-100px)translateX(200px);
-        }
-        50% , 60% {
-            transform: scale(.3)scale(5)rotate(360deg)translateY(-30px);
-        }
-        60% {
-            transform: rotate(360deg)translateX(-200px);
-        }
-        60% , 64% {
-            background: var(--secondary-color);
-        }
-        65% , 70%{
-            transform: perspective(400px)rotateX(360deg)rotateY(360deg)rotateZ(360deg);
-        }
-        80% {
-            transform: rotate(360deg);
-        }
-        90% {
-            transform: translateX(200px)rotateX(360deg);
-        }
-    }    
+  animation: animate-square-preview-landing 10s infinite linear;
+  transform-style: preserve-3d;
+  @keyframes animate-square-preview-landing {
+    0%,10% {
+      transform: rotate(360deg);
+    }
+    20%,30% {
+      transform: rotate(360deg) translateX(-100px) translateX(200px);
+    }
+    50%,60% {
+      transform: scale(0.3) scale(5) rotate(360deg) translateY(-30px);
+    }
+    60% {
+      transform: rotate(360deg) translateX(-200px);
+    }
+    60%,64% {
+      background: var(--secondary-color);
+    }
+    65%,70% {
+      transform: perspective(400px) rotateX(360deg) rotateY(360deg)
+        rotateZ(360deg);
+    }
+    80% {
+      transform: rotate(360deg);
+    }
+    90% {
+      transform: translateX(200px) rotateX(360deg);
+    }
+  }
 }
-

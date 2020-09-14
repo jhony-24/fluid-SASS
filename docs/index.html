@@ -42,7 +42,7 @@
                 v-for="i in links" 
                 :to="i.to" 
                 :text="i.text"
-                :selected-color="selectedLink === i.to ? '#5C24FC' : 'black'" 
+                :selected-color="activeColorLinkSelected(selectedLink === i.to)" 
                 @onclick="onLinkSelected(i.to)"></strong-link>
             </div>
             <div class="circle"><div class="text-circle">GO !</div></div>

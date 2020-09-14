@@ -25,10 +25,11 @@
   border-collapse: collapse;
   &__header {
     @extend %padding-td;
+    color: var(--color-text-normal);
   }
   &__body {
     tr {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+      border-bottom: 1px solid var(--color-page-layout);
     }
     @extend %padding-td;
     td {

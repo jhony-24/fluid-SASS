@@ -2,8 +2,8 @@
   padding: 2em 0 1em;
   background: linear-gradient(
     185deg,
-    lighten($primary-color, 40) 50%,
-    darken($silver, 0) 50%
+    var(--color-primary-alpha) 50%,
+    var(--color-silver-alpha) 50%,
   );
   user-select: none;
   .sub-footer {
@@ -19,7 +19,7 @@
       font-size: 2em;
       text-align: center;
       text-transform: uppercase;
-      color: $primary-color;
+      color: var(--color-primary);
       margin-top: 1em;
       width: 50%;
       font-weight: normal;
@@ -43,7 +43,7 @@
     .flag-text {
       margin: 50px 20px 20px;
       * {
-        color: $text-smooth;
+        color: var(--color-text-smooth);
       }
     }
   }

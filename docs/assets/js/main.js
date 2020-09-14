@@ -113,6 +113,16 @@ window.addEventListener('load', function () {
                 names.push(current);
             }
             return names;
+        },
+        activeColorLinkSelected : function() {
+            return (value) => {
+              let prop = window.getComputedStyle(document.documentElement);
+              let colors = {
+               primary : prop.getPropertyValue('--color-primary'),
+               normal : prop.getPropertyValue('--color-text-normal'),
+              };
+              return value ? colors.primary : colors.normal;
+          }
         }
     }
 

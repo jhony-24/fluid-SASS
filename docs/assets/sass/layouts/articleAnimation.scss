@@ -80,7 +80,7 @@
       padding-right: 2em;
       &::-webkit-scrollbar {
         display: block;
-        background: $silver;
+        background: var(--color-silver);
         width: 6px;
         height: 8px;
       }
