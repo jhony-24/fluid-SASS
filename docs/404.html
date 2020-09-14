@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Fluid-sass | 404</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-primary: #5c24fc;
+        --color-error: rgb(60, 60, 60);
+        --color-text: rgba(0, 0, 0, 0.5);
+        --color-page: #ffffff;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--color-page);
+      }
+      .error {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .error__message {
+        text-align: center;
+        font-size: 1rem;
+        width: 70%;
+        line-height: 25px;
+        color: var(--color-text);
+      }
+      .error__number {
+        font-size: 15em;
+        margin: 20px auto 40px;
+        font-family: "Titan One";
+        color: var(--color-error);
+        text-align: center;
+      }
+     .error__number .number {
+         will-change: transform;
+        animation: error__number 1s linear infinite alternate;
+      }
+      @keyframes error__number {
+        from {
+            transform: translateY(-15px);
+        }
+      }
+      .error__number .text {
+        font-size: 18px;
+      }
+      .button--link {
+        text-decoration: none;
+        color: white;
+        background-color: var(--color-primary);
+        padding: 13px 4em;
+        border-radius: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        transition: .3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .button--link-hover {
+        --size:90px;
+        width: var(--size);
+        height: var(--size); 
+        padding: 0; 
+        border-radius: 100%;
+        word-break: break-all;
+      }
+      @media screen and (max-width:500px) {
+        .error__number {
+            font-size: 7em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="error">
+      <span class="error__message">This is not the page you are looking for, click on the button to take you to the original page</span>
+      <span class="error__number">
+        <div class="number">404</div>
+        <div class="text">Ooops.... Has ocurred a error</div>
+      </span>
+      <span class="error__button">
+        <a href="https://jhony-24.github.io/fluid-sass" class="button--link">Volver</a>
+      </span>
+    </div>
+    <script>
+        let link = document.links[0];
+        let className = 'button--link-hover';
+        link.onmouseenter = () => link.classList.add(className);
+        link.onmouseout = () => link.classList.remove(className);
+    </script>
+  </body>
+</html>
