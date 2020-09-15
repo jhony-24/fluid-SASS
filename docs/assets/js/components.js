@@ -42,6 +42,16 @@ Vue.component("simple-toast", {
   template: `<div class="simple-toast"><span class="text from-top">{{message}}</span></div>`,
 });
 
+Vue.component("button-change-theme", {
+  template: `<button class="button-change-theme" @click="onChangeTheme"><span class="text">Change theme</span></button>`,
+  methods: {
+    onChangeTheme() {
+      let themeProvider = new ThemeProvider()
+      themeProvider.toggleTheme();
+    },
+  },
+});
+
 // main app components
 const SquareMotion = {
   props: {

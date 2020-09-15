@@ -170,6 +170,7 @@ window.addEventListener('load', function () {
         isCopy: false,
     }
 
+    let themeProvider = new ThemeProvider();
     // instance app 
     new Vue({
         el: '#app',
@@ -179,6 +180,7 @@ window.addEventListener('load', function () {
         methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample },
         created() {
             this.onLinkSelected('#home');
+            themeProvider.setDefaultTheme();
         }
     });
 

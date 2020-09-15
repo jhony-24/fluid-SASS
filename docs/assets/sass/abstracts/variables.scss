@@ -21,18 +21,16 @@ $width-mobile1: 600px;
   --color-silver-alpha: #fafafa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-silver: rgb(250, 250, 250);
-    --color-page-layout: rgb(50, 50, 50);
-    --color-text-smooth: rgb(210, 210, 210);
-    --color-primary: #5c24fc;
-    --color-secondary: #9250ff;
-    --color-page: rgb(30, 30, 30);
-    --color-text-normal: #ffffff;
-    --color-format-code-title: rgb(200, 200, 200);
-    --color-format-code-content: #ffffff;
-    --color-primary-alpha: #222222;
-    --color-silver-alpha: #2e2e2e;
-  }
+[data-theme="dark"] {
+  --color-silver: rgb(250, 250, 250);
+  --color-page-layout: rgb(50, 50, 50);
+  --color-text-smooth: rgb(210, 210, 210);
+  --color-primary: #5c24fc;
+  --color-secondary: #9250ff;
+  --color-page: rgb(30, 30, 30);
+  --color-text-normal: #ffffff;
+  --color-format-code-title: rgb(200, 200, 200);
+  --color-format-code-content: #ffffff;
+  --color-primary-alpha: #222222;
+  --color-silver-alpha: #2e2e2e;
 }
