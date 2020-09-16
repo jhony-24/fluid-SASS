@@ -116,11 +116,7 @@ window.addEventListener('load', function () {
         },
         activeColorLinkSelected : function() {
             return (value) => {
-              let prop = window.getComputedStyle(document.documentElement);
-              let colors = {
-               primary : prop.getPropertyValue('--color-primary'),
-               normal : prop.getPropertyValue('--color-text-normal'),
-              };
+              let colors = this.themes.themeNavLinkColors;
               return value ? colors.primary : colors.normal;
           }
         }
@@ -158,6 +154,19 @@ window.addEventListener('load', function () {
         }
     }
 
+    var methodsTheme = {
+        setNavLinkColors : function() { 
+            let prop = getComputedStyle(document.documentElement);
+            this.themes.themeNavLinkColors = {
+                primary : prop.getPropertyValue('--color-primary'),
+                normal : prop.getPropertyValue('--color-text-normal'), 
+            }
+        },                               
+        onChangeTheme : function() {
+            this.setNavLinkColors();
+        }
+    }
+
     // initial state of the app
     const initialState = {
         typesAnimation,
@@ -168,19 +177,25 @@ window.addEventListener('load', function () {
         selectedLink: window.location.hash,
         isDownload: false,
         isCopy: false,
+        themes : {
+            mode : null,
+            themeNavLinkColors: {}
+        },
+
     }
 
     let themeProvider = new ThemeProvider();
     // instance app 
-    new Vue({
+    window.app = new Vue({
         el: '#app',
         data: initialState,
         components: { ...components },
         computed: { ...computedAnimations,...computedGetDataToTable },
-        methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample },
+        methods: { ...methodsAnimationSquare, ...methodsDownload, ...methodsExample,...methodsTheme },
         created() {
-            this.onLinkSelected('#home');
             themeProvider.setDefaultTheme();
+            this.setNavLinkColors();
+            this.onLinkSelected('#home');
         }
     });
 

@@ -48,6 +48,7 @@ Vue.component("button-change-theme", {
     onChangeTheme() {
       let themeProvider = new ThemeProvider()
       themeProvider.toggleTheme();
+      this.$emit("change-theme",themeProvider.getTheme());
     },
   },
 });

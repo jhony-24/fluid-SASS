@@ -1,5 +1,5 @@
 .header {
-  background: var(--color-page-layout);
+  background-color: var(--color-page-layout);
   height: $height-header;
   width: 100%;
   display: flex;
@@ -8,6 +8,7 @@
   top: 0;
   z-index: 1;
   margin: auto;
+  @extend %transition-background-theme;
   .links {
     display: flex;
     align-items: center;

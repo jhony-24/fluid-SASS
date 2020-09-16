@@ -26,6 +26,7 @@ html,
 body {
   scroll-behavior: smooth;
   background: var(--color-page);
+  @extend %transition-background-theme;
 }
 
 ::-webkit-scrollbar {

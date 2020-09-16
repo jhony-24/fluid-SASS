@@ -31,11 +31,12 @@ ThemeProvider.prototype.toggleTheme = function () {
   this.assignThemeToDocument(this.getTheme());
 };
 
-ThemeProvider.prototype.setDefaultTheme = function () {
+ThemeProvider.prototype.setDefaultTheme = function (callback) {
   let theme = this.getDeviceThemeMedia();
   if (this.getTheme()) {
     this.assignThemeToDocument(this.getTheme());
   } else {
     this.assignThemeToDocument(theme);
   }
+  if(callback !== undefined) callback(this.getTheme());
 };
