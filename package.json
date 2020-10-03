@@ -22,7 +22,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp sass"
+    "build": "gulp scss"
   },
   "license": "ISC",
   "devDependencies": {

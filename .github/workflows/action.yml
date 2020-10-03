@@ -1,4 +1,4 @@
-name: npm-plublish
+name: npm-publish
 on:
   push:
     branches:
