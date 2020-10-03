@@ -4,7 +4,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 function sassTask() {
     return (
-        src("./sass/animations.scss")
+        src("./scss/animations.scss")
             .pipe(sass({
                 outputStyle: "compressed"
             }))
@@ -14,9 +14,9 @@ function sassTask() {
 }
 
 function defaultTask() {
-    watch("sass/*.scss", series("sass"))
+    watch("scss/*.scss", series("scss"))
 }
 
-task("sass", sassTask);
+task("scss", sassTask);
 task("default", defaultTask);
 

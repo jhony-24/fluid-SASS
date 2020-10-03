@@ -1,4 +1,6 @@
-/css
+.editorconfig
 /docs
 /example
-/sass
+/node_modules
+/.github
+404.md

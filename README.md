@@ -12,13 +12,22 @@ There are currently **20** animations available **[official documentation](https
 
 ```console
 $ npm install -g fluid-sass 
-$ npm install --save fluid-sass 
+$ npm install -D fluid-sass 
 ```
 
 ```console
 $ yarn add fluid-sass 
 ```
 
+## Usage 
+This command installs the files you need (css, scss)
+```console
+$ fluid-sass install <typeFile> --dir=<dir>
+```
+| options | description | options |
+| -- | -- | :--: |
+| typeFile | Install a file type css or scss in the project | ( css, scss ) |
+| dir | The directory to install |
 
 ## How to Integrate
 See a sample of how to integrate development code in HTML, SCSS and for more dynamism in Javascript.
@@ -39,11 +48,11 @@ Include the class name as a mixin to your custom classes.
 Include your class names personalized.
 ```html
 <!-- page.html -->
-<header class="header-component">
-    <button class="btn fluid-shake-vertical" id="btn-sign-in">
+<header class="fluid-bounce">
+    <button class="fluid-shake-vertical" id="btn-sign-in">
         Sign in
     </button>
-    <button class="btn fluid-shake-vertical" id="btn-sign-up">
+    <button class="fluid-shake-vertical" id="btn-sign-up">
         Sign up
     </button>
 </header>
@@ -52,10 +61,10 @@ Include the default class names configurated.
 ```html
 <!-- page.html -->
 <header class="fluid-bounce">
-    <button class="btn fluid-shake-vertical" id="btn-sign-in">
+    <button class="fluid-shake-vertical" id="btn-sign-in">
         Sign in
     </button>
-    <button class="btn fluid-shake-vertical" id="btn-sign-up">
+    <button class="fluid-shake-vertical" id="btn-sign-up">
         Sign up
     </button>
 </header>
