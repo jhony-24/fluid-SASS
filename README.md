@@ -5,13 +5,14 @@
 
 ## What is Fluid-Sass?
 
-Fluid sass in a serie of scss mixins and css classes to create fluid and spring animations based on movement, just include the mixin in your class and edit it as you like to create fast and beautiful animations.
-There are currently **20** animations available **[official documentation](https://jhony-24.github.io/fluid-sass)**.
+Fluid sass in a series of scss mixins and css classes to create fluid and spring based motion animations, just include mixin in your class to create fast and beautiful animations.
+
+There are currently **22** animations available **[official documentation](https://jhony-24.github.io/fluid-sass)**.
 
 ## Installation
 
 ```console
-$ npm install -g fluid-sass 
+$ npm install fluid-sass 
 $ npm install -D fluid-sass 
 ```
 
@@ -20,7 +21,8 @@ $ yarn add fluid-sass
 ```
 
 ## Usage 
-This command installs the files you need (css, scss)
+This command installs the files you need (css, scss). If you are using in development mode, you can use **npx** prefix before **fluid-sass** command.
+
 ```console
 $ fluid-sass install <typeFile> --dir=<dir>
 ```
@@ -29,12 +31,30 @@ $ fluid-sass install <typeFile> --dir=<dir>
 | typeFile | Install a file type css or scss in the project | ( css, scss ) |
 | dir | The directory to install |
 
+
 ## How to Integrate
-See a sample of how to integrate development code in HTML, SCSS and for more dynamism in Javascript.
+See a sample of how to integrate development code in HTML, CSS, SCSS and for more dynamism in Javascript.
+
+### HTML 
+Include your class names personalized.
+```html
+<!-- page.html -->
+<link rel="stylesheet" href="animations.css" />
+
+<header class="fluid-bounce">
+    <button class="fluid-shake-vertical" id="btn-sign-in">
+        Sign in
+    </button>
+    <button class="fluid-shake-vertical" id="btn-sign-up">
+        Sign up
+    </button>
+</header>
+```
 
 ### SASS / SCSS 
 Include the class name as a mixin to your custom classes.
 ```scss
+@import "animations";
 // page.scss
 .header-component {
     @include fluid-bounce();
@@ -42,32 +62,6 @@ Include the class name as a mixin to your custom classes.
 .button-component {
     @include fluid-shake-vertical();
 }
-```
-
-### HTML 
-Include your class names personalized.
-```html
-<!-- page.html -->
-<header class="fluid-bounce">
-    <button class="fluid-shake-vertical" id="btn-sign-in">
-        Sign in
-    </button>
-    <button class="fluid-shake-vertical" id="btn-sign-up">
-        Sign up
-    </button>
-</header>
-```
-Include the default class names configurated.
-```html
-<!-- page.html -->
-<header class="fluid-bounce">
-    <button class="fluid-shake-vertical" id="btn-sign-in">
-        Sign in
-    </button>
-    <button class="fluid-shake-vertical" id="btn-sign-up">
-        Sign up
-    </button>
-</header>
 ```
 
 ### Javascript

@@ -18,7 +18,7 @@ var examples = [
     {
         language: "html",
         code: `
-        <!-- page.html -->
+        <link rel="stylesheet" href="animations.css" />
         <header class="header-component">
             <button class="fluid-shake-vertical">
                 Sign in
@@ -29,9 +29,11 @@ var examples = [
         </header>`
     },
     {
-        language: "sass / scss",
+        language: "scss",
         code: `
         // page.scss
+        @import "animations";
+        
         .header-component {
             @include fluid-bounce();
         }

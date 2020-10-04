@@ -34,7 +34,7 @@
     @extend %padding-td;
     td {
       text-align: center;
-      color: gray;
+      color: var(--color-text-gray);
     }
   }
 }
