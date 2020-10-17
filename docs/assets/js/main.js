@@ -27,13 +27,14 @@ window.addEventListener('load', function () {
     // all methods to downlaod all files
     var methodsDownload = {
         downloadCSS: function () { downloadFile(this, 'assets/css/', 'animations.css'); },
-        downloadSASS: function () { downloadFile(this, 'assets/zip/', 'sass.zip'); }
+        downloadSASS: function () { downloadFile(this, 'assets/scss/', 'scss.zip'); }
     }
 
+    const prefixAnimation = "fluid-";
     //animate the square in mixins and classes
     var methodsAnimationSquare = {
         selectAnimation: function (text) {
-            this.currentAnimation = text;
+            this.currentAnimation = prefixAnimation + text;
             document.querySelector('.square-main').addEventListener('webkitAnimationEnd', (event) => {
                 event.target.classList.remove(this.currentAnimation);
                 setTimeout(() => {

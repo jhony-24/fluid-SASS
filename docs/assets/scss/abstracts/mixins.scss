@@ -1,0 +1,53 @@
+/*
+Create animation structure.
+Example:
+input:
+  $props = ( name :  hello-animation , duration : .3s , iteration : 2 )
+output:
+  animation : hello-animation .3s 2 ease-in-out;
+  @keyframes hello-animation {
+    
+  }
+*/
+@mixin animation($props) {
+  $name: map-get(
+    $map: $props,
+    $key: name,
+  );
+  $duration: map-get(
+    $map: $props,
+    $key: duration,
+  );
+  $iteration: map-get(
+    $map: $props,
+    $key: iteration,
+  );
+  animation: $name $duration $iteration ease-in-out;
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/*
+Insert transformations.
+*/
+@mixin transform($mapTransform) {
+  transform: $mapTransform;
+}
+
+/*
+Create frame animation value but only transform, frame percentage and map value are required to transform.
+Example:
+input:
+  $percentage = 10%
+  $transform = ( perspective : 600px , translateX : 100px )
+output:
+  10% {
+    transform : perspective(600px)translateX(100px);
+  }
+*/
+@mixin frame($percentage, $transforms) {
+  #{$percentage} {
+    @include transform(defineTransforms($transforms));
+  }
+}
