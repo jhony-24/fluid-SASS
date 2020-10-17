@@ -24,7 +24,7 @@ const scss = "scss";
 const getFullnameFile = (extension) => nameFile + "." + extension;
 
 const pathJoin = (...location) => path.join(currentDir,...location);
-
+console.log(currentDir)
 /**
  * All commands to install a file css or scss with diferents options
  */
@@ -38,7 +38,7 @@ const commandsInstall = {
     },
     scss([dir],callback) {
         fsExtra.copy( pathJoin(scss), pathJoin(dir),(error) => {
-            if(error) throw new Error(error.message);
+            if(error) console.log(error.message);
             callback();
         })
     }
