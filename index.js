@@ -17,6 +17,7 @@ program.version(package.version,"-v, --version","Version fluid-sass animation");
 
 const paths = require.main.paths;
 const currentDir =  paths[0].split("node_modules")[0].slice(0,-1);
+const node_modules = ["node_modules","fluid-sass"]
 let nameFile = "animations";
 const css = "css";
 const scss = "scss";
@@ -24,22 +25,19 @@ const scss = "scss";
 const getFullnameFile = (extension) => nameFile + "." + extension;
 
 const pathJoin = (...location) => path.join(currentDir,...location);
-console.log(chalk.cyan(currentDir))
 /**
  * All commands to install a file css or scss with diferents options
  */
 const commandsInstall = {
     css([dir],callback) {
-        console.log( chalk.red(pathJoin(css,getFullnameFile(css))) )
-        console.log( chalk.blue(pathJoin(dir,getFullnameFile(css))) )
         fs.copyFile( 
-            pathJoin(css,getFullnameFile(css)) , 
+            pathJoin(...node_modules,css,getFullnameFile(css)) , 
             pathJoin(dir,getFullnameFile(css)) , 
             callback
         );
     },
     scss([dir],callback) {
-        fsExtra.copy( pathJoin(scss), pathJoin(dir),(error) => {
+        fsExtra.copy( pathJoin(...node_modules,scss), pathJoin(dir),(error) => {
             if(error) console.log(error.message);
             callback();
         })
