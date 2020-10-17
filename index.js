@@ -8,7 +8,6 @@ const spinner = ora({spinner:cliSpinners.dots});
 const fs = require("fs");
 const fsExtra = require("fs-extra");
 const path = require("path");
-const { exec } = require("child_process");
 
 program.version(package.version,"-v, --version","Version fluid-sass animation");
 
@@ -16,7 +15,7 @@ program.version(package.version,"-v, --version","Version fluid-sass animation");
  * Base directories and main file
  */
 const currentDir = __dirname;
-const locationModule = [ "node_modules","fluid-sass" ];
+const locationModule = [ "" ];
 let nameFile = "animations";
 const css = "css";
 const scss = "scss";
