@@ -24,12 +24,14 @@ const scss = "scss";
 const getFullnameFile = (extension) => nameFile + "." + extension;
 
 const pathJoin = (...location) => path.join(currentDir,...location);
-console.log(currentDir)
+console.log(chalk.cyan(currentDir))
 /**
  * All commands to install a file css or scss with diferents options
  */
 const commandsInstall = {
     css([dir],callback) {
+        console.log( chalk.red(pathJoin(css,getFullnameFile(css))) )
+        console.log( chalk.blue(pathJoin(dir,getFullnameFile(css))) )
         fs.copyFile( 
             pathJoin(css,getFullnameFile(css)) , 
             pathJoin(dir,getFullnameFile(css)) , 
